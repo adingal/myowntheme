@@ -9,7 +9,7 @@ textarea {
 	@include font-size(.9);
 	line-height: $font__line-height-body;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: $lg) {
 		@include font-size(1);
 	}
 }

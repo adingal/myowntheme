@@ -299,7 +299,7 @@ textarea {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5; }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
     body,
     button,
     input,
@@ -626,9 +626,11 @@ a:hover, a:active {
 .site-featured-image img {
     display: block;
     width: 100vw;
-    height: auto; }
+    height: 20vh; }
+@media screen and (min-width: 720px) {
+      .site-featured-image img {
+        height: auto; } }
 .site-header {
-  height: 86px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -640,20 +642,24 @@ a:hover, a:active {
     .site-header {
       padding: 0 2em; } }
 .site-branding {
+  height: 86px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   padding: 8px 0; }
-.site-branding .custom-logo-link img {
+.site-branding img {
     width: auto;
     height: 70px;
-    display: block;
+    display: none;
     margin-right: 8px; }
+@media screen and (min-width: 720px) {
+      .site-branding img {
+        display: block; } }
 .site-title {
   font-size: 2em;
-  margin: 0;
+  margin: 0 16px 0 0;
   padding: 0; }
 .site-title a {
     text-decoration: none;

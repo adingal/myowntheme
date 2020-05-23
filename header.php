@@ -50,7 +50,13 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'myowntheme' ); ?></button>
+			<div class="burger-menu" aria-controls="primary-menu">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
 			<?php
 			wp_nav_menu(
 				array(

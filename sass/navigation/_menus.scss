@@ -70,20 +70,39 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.toggled ul {
 	display: block;
+}
+
+.burger-menu {
+	ul {
+		display: block;
+		cursor: pointer;
+
+		li {
+			height: 8px;
+			width: 65px;
+			margin-bottom: 8px;
+			background-color: $color__bg-header;
+			border-radius: 4px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: $md) {
 
-	.menu-toggle {
-		display: none;
-	}
-
 	.main-navigation ul {
 		display: flex;
 	}
+
+	.burger-menu > ul {
+		display: none;
+	}
+
 }
 
 .comment-navigation,

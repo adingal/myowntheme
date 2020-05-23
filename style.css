@@ -526,14 +526,24 @@ a:hover, a:active {
     display: block;
     text-decoration: none; }
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.toggled ul {
   display: block; }
+.burger-menu ul {
+  display: block;
+  cursor: pointer; }
+.burger-menu ul li {
+    height: 8px;
+    width: 65px;
+    margin-bottom: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px; }
+.burger-menu ul li:last-of-type {
+      margin-bottom: 0; }
 @media screen and (min-width: 720px) {
-  .menu-toggle {
-    display: none; }
   .main-navigation ul {
-    display: flex; } }
+    display: flex; }
+  .burger-menu > ul {
+    display: none; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -666,7 +676,7 @@ a:hover, a:active {
     color: #e0e0e0; }
 .site-title a:hover, .site-title a:active {
       text-decoration: underline;
-      color: #ffffff; }
+      color: #fff; }
 .main-navigation {
   width: auto; }
 @media screen and (min-width: 720px) {

@@ -539,11 +539,26 @@ a:hover, a:active {
     border-radius: 4px; }
 .burger-menu ul li:last-of-type {
       margin-bottom: 0; }
+.menu {
+  position: absolute;
+  top: 86px;
+  right: 0;
+  left: 0;
+  background-color: #242423; }
+.menu li {
+    padding: 0 0 .5em 1em; }
 @media screen and (min-width: 720px) {
   .main-navigation ul {
     display: flex; }
   .burger-menu > ul {
-    display: none; } }
+    display: none; }
+  .menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0; }
+    .menu li {
+      padding: 0; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -646,6 +661,7 @@ a:hover, a:active {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   background-color: #242423;
   padding: 0 1em; }
 @media screen and (min-width: 720px) {

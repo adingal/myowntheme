@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: #242423;
+    background-color: $color__main;
     padding: 0 1em;
 
     @media screen and (min-width: $md) {

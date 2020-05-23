@@ -620,6 +620,13 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+.site-featured-image {
+  margin: 0;
+  padding: 0; }
+.site-featured-image img {
+    display: block;
+    width: 100vw;
+    height: auto; }
 .site-header {
   height: 70px;
   display: flex;

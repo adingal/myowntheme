@@ -25,6 +25,14 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'myowntheme' ); ?></a>
 
+	<?php if ( get_header_image() ) : ?>
+		<figure class="site-featured-image">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+			</a>
+		</figure>
+	<?php endif; ?>
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php

@@ -1,0 +1,7 @@
+.site-header {
+    padding: 1em;
+
+    @media screen and (min-width: $md) {
+        padding: 1em 2em;
+    }
+}

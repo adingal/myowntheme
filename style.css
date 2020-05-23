@@ -529,7 +529,7 @@ a:hover, a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 720px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -621,10 +621,33 @@ a:hover, a:active {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 1em; }
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #242423;
+  padding: 0 1em; }
 @media screen and (min-width: 720px) {
     .site-header {
-      padding: 1em 2em; } }
+      padding: 0 2em; } }
+.site-title {
+  font-size: 2em;
+  margin: 0;
+  padding: 0; }
+.site-title a {
+    text-decoration: none;
+    color: #e0e0e0; }
+.site-title a:hover, .site-title a:active {
+      text-decoration: underline;
+      color: #ffffff; }
+.main-navigation {
+  width: auto; }
+@media screen and (min-width: 720px) {
+    .main-navigation {
+      align-self: flex-end;
+      padding-bottom: .5em; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

@@ -628,7 +628,7 @@ a:hover, a:active {
     width: 100vw;
     height: auto; }
 .site-header {
-  height: 70px;
+  height: 86px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -639,6 +639,18 @@ a:hover, a:active {
 @media screen and (min-width: 720px) {
     .site-header {
       padding: 0 2em; } }
+.site-branding {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 0; }
+.site-branding .custom-logo-link img {
+    width: auto;
+    height: 70px;
+    display: block;
+    margin-right: 8px; }
 .site-title {
   font-size: 2em;
   margin: 0;

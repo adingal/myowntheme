@@ -673,6 +673,35 @@ a:hover, a:active {
 .bypostauthor {
   display: block; }
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+  background-color: #242423;
+  padding: 1em;
+  color: #ffffff; }
+@media screen and (min-width: 720px) {
+    .site-footer {
+      padding: 0 2em; } }
+.site-info {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+.site-info p {
+    margin: 0;
+    padding: 0; }
+.site-info a {
+    text-decoration: none;
+    color: #e0e0e0; }
+.site-info a:hover, .site-info a:active {
+      text-decoration: underline;
+      color: #ffffff; }
+@media screen and (min-width: 720px) {
+    .site-info {
+      flex-direction: row; } }
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {

@@ -120,6 +120,60 @@ function myowntheme_content_width() {
 add_action( 'after_setup_theme', 'myowntheme_content_width', 0 );
 
 /**
+ * Register custom fonts, from myowntheme theme.
+ */
+function myowntheme_fonts_url() {
+	$fonts_url = '';
+
+	$lato = _x( 'on', 'Lato font: on or off', 'myowntheme' );
+	$raleway = _x( 'on', 'Raleway font: on or off', 'myowntheme' );
+	$font_families = array();
+
+	if ( 'off' !== $lato ) {
+
+		$font_families[] = 'Lato:300,300i,400,400i,600,600i,800,800i';
+
+	}
+
+	if ( 'off' !== $raleway ) {
+
+		$font_families[] = 'Raleway:300,300i,400,400i,600,600i,800,800i';
+
+	}
+
+	$query_args = array(
+		'family'  => urlencode( implode( '|', $font_families ) ),
+		'subset'  => urlencode( 'latin,latin-ext' ),
+		'display' => urlencode( 'fallback' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function myowntheme_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'myowntheme-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'myowntheme_resource_hints', 10, 2 );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -143,6 +197,9 @@ add_action( 'widgets_init', 'myowntheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function myowntheme_scripts() {
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'myowntheme-fonts', myowntheme_fonts_url(), array(), null );
+	
 	wp_enqueue_style( 'myowntheme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'myowntheme-style', 'rtl', 'replace' );
 

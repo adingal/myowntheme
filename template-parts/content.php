@@ -21,10 +21,12 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				myowntheme_posted_on();
-				myowntheme_posted_by();
-				?>
+				<p>
+					<span><?php the_author(); ?></span>
+					<span><?php the_time( 'F j, Y' ); ?></span>
+					<span><?php the_category( ', ' ); ?></span>
+					<span><?php the_tags( '', ', ', '' ); ?></span>
+				</p>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

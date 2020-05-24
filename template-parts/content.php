@@ -22,10 +22,10 @@
 			?>
 			<div class="entry-meta">
 				<p>
-					<span><?php the_author(); ?></span>
-					<span><?php the_time( 'F j, Y' ); ?></span>
-					<span><?php the_category( ', ' ); ?></span>
-					<span><?php the_tags( '', ', ', '' ); ?></span>
+					<span class="author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a></span>
+					<span class="posted_date"><?php the_time( 'F j, Y' ); ?></span>
+					<span class="categories"><?php the_category( ', ' ); ?></span>
+					<span class="tags"><?php the_tags( '', ', ', '' ); ?></span>
 				</p>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

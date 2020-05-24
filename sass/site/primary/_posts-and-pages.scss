@@ -72,6 +72,26 @@
 	}
 }
 
+/*
+ * Entry content
+ */
+.entry-content {
+	padding: 16px;
+	overflow: hidden;
+
+	div,
+	p {
+		margin: 0 0 16px 0;
+		line-height: 1.5;
+	}
+
+	figcaption {
+		font-size: .9em;
+		font-style: italic;
+		text-align: center;
+	}
+}
+
 .sticky {
 	display: block;
 }
@@ -85,7 +105,6 @@
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }

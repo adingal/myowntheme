@@ -655,19 +655,14 @@ a:hover, a:active {
 # Alignments
 --------------------------------------------------------------*/
 .alignleft {
-  float: left;
-  margin-right: 1.5em;
-  margin-bottom: 1.5em; }
+  float: left; }
 .alignright {
-  float: right;
-  margin-left: 1.5em;
-  margin-bottom: 1.5em; }
+  float: right; }
 .aligncenter {
   clear: both;
   display: block;
   margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em; }
+  margin-right: auto; }
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -792,6 +787,20 @@ body {
 @media screen and (min-width: 960px) {
     .entry-header {
       padding: 0 32px; } }
+/*
+ * Entry content
+ */
+.entry-content {
+  padding: 16px;
+  overflow: hidden; }
+.entry-content div,
+  .entry-content p {
+    margin: 0 0 16px 0;
+    line-height: 1.5; }
+.entry-content figcaption {
+    font-size: .9em;
+    font-style: italic;
+    text-align: center; }
 .sticky {
   display: block; }
 .page {
@@ -799,7 +808,6 @@ body {
 .updated:not(.published) {
   display: none; }
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5em 0 0; }
 .page-links {

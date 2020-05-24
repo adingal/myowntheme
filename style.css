@@ -746,9 +746,24 @@ body {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.post {
+  border: 1px solid #cfdbd5; }
+.entry-header {
+  padding: 0 16px; }
+.entry-header .entry-title,
+  .entry-header .entry-meta p {
+    margin: 0;
+    padding: 0; }
+.entry-header .entry-title {
+    border-bottom: 1px solid #cfdbd5; }
+.entry-header .entry-meta {
+    font-size: .9em;
+    padding: 8px 0; }
+@media screen and (min-width: 960px) {
+    .entry-header {
+      padding: 0 32px; } }
 .sticky {
   display: block; }
-.post,
 .page {
   margin: 0 0 1.5em; }
 .updated:not(.published) {

@@ -531,7 +531,15 @@ a:hover, a:active {
     position: relative; }
 .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #cfdbd5; }
+.main-navigation a:hover, .main-navigation a:focus {
+      color: #fff; }
+.main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a,
+  .main-navigation .current-menu-ancestor > a {
+    color: #fff; }
 .menu-item-has-children {
   background-image: url("assets/img/expand-arrow.png");
   background-repeat: no-repeat;
@@ -559,9 +567,14 @@ a:hover, a:active {
   background-color: #242423; }
 .menu li {
     padding: 8px 16px; }
+/* Desktop menu */
 @media screen and (min-width: 720px) {
   .main-navigation ul {
-    display: flex; }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .main-navigation ul ul ul {
+      top: 43px; }
   .burger-menu > ul {
     display: none; }
   .menu {
@@ -569,9 +582,20 @@ a:hover, a:active {
     top: 0;
     right: 0;
     left: 0; }
-    .menu li {
+    .menu > li {
       margin: 0 12px 0 0;
-      padding: 0; } }
+      padding: 8px; }
+      .menu > li:last-of-type {
+        margin: 0; }
+  .menu > .menu-item-has-children {
+    background-position: 100% 50%;
+    padding-right: 25px; }
+  .sub-menu > li {
+    padding-right: 25px; } }
+@media screen and (min-width: 960px) {
+  .main-navigation ul ul ul {
+    top: 46px; } }
+/* Comment and post navigation */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -711,7 +735,7 @@ a:hover, a:active {
 @media screen and (min-width: 720px) {
     .main-navigation {
       align-self: flex-end;
-      padding-bottom: 8px; } }
+      padding: 0; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

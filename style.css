@@ -674,6 +674,11 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Global layout
 --------------------------------------------------------------*/
+body {
+  background-image: url("assets/img/paper.png");
+  background-repeat: repeat;
+  background-position: top left;
+  background-attachment: scroll; }
 .site-main {
   max-width: 1140px;
   margin: 0 auto;

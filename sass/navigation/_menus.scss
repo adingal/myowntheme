@@ -9,13 +9,13 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
 			background-color: $color__main;
-			border: 1px solid $color__bg-header;
+			border: 1px solid $color__text-input;
 			border-radius: 0 0 4px 4px;
 			z-index: 99999;
 
@@ -25,12 +25,16 @@
 			}
 
 			li {
-				border-bottom: 1px solid $color__bg-header;
+				border-bottom: 1px solid $color__text-input;
+
+				&:last-of-type {
+					border: none;
+				}
 
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
-					left: 216px;
+					left: 50%;
 				}
 			}
 
@@ -73,6 +77,13 @@
 	}
 }
 
+.menu-item-has-children {
+	background-image: url('assets/img/expand-arrow.png');
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+	background-attachment: scroll;
+}
+
 /* Small menu. */
 .toggled ul {
 	display: block;
@@ -105,7 +116,7 @@
 	background-color: $color__main;
 
 	li {
-		padding: 8px 0 8px 16px;
+		padding: 8px 16px;
 	}
 }
 

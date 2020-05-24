@@ -502,24 +502,26 @@ a:hover, a:active {
     margin: 0;
     padding-left: 0; }
 .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 100%;
       left: -999em;
       background-color: #242423;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #666;
       border-radius: 0 0 4px 4px;
       z-index: 99999; }
 .main-navigation ul ul ul {
         left: -999em;
         top: 43px; }
 .main-navigation ul ul li {
-        border-bottom: 1px solid #e0e0e0; }
+        border-bottom: 1px solid #666; }
+.main-navigation ul ul li:last-of-type {
+          border: none; }
 .main-navigation ul ul li:hover > ul,
         .main-navigation ul ul li.focus > ul {
           display: block;
-          left: 216px; }
+          left: 50%; }
 .main-navigation ul ul a {
         width: 200px; }
 .main-navigation ul li:hover > ul,
@@ -530,6 +532,11 @@ a:hover, a:active {
 .main-navigation a {
     display: block;
     text-decoration: none; }
+.menu-item-has-children {
+  background-image: url("assets/img/expand-arrow.png");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-attachment: scroll; }
 /* Small menu. */
 .toggled ul {
   display: block; }
@@ -551,7 +558,7 @@ a:hover, a:active {
   left: 0;
   background-color: #242423; }
 .menu li {
-    padding: 8px 0 8px 16px; }
+    padding: 8px 16px; }
 @media screen and (min-width: 720px) {
   .main-navigation ul {
     display: flex; }

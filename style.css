@@ -507,14 +507,19 @@ a:hover, a:active {
       position: absolute;
       top: 100%;
       left: -999em;
+      background-color: #242423;
+      border: 1px solid #e0e0e0;
+      border-radius: 0 0 4px 4px;
       z-index: 99999; }
 .main-navigation ul ul ul {
         left: -999em;
-        top: 0; }
+        top: 43px; }
+.main-navigation ul ul li {
+        border-bottom: 1px solid #e0e0e0; }
 .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        display: block;
-        left: auto; }
+        .main-navigation ul ul li.focus > ul {
+          display: block;
+          left: 216px; }
 .main-navigation ul ul a {
         width: 200px; }
 .main-navigation ul li:hover > ul,
@@ -546,7 +551,7 @@ a:hover, a:active {
   left: 0;
   background-color: #242423; }
 .menu li {
-    padding: 0 0 .5em 1em; }
+    padding: 8px 0 8px 16px; }
 @media screen and (min-width: 720px) {
   .main-navigation ul {
     display: flex; }
@@ -558,11 +563,12 @@ a:hover, a:active {
     right: 0;
     left: 0; }
     .menu li {
+      margin: 0 12px 0 0;
       padding: 0; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em; }
+  margin: 0 0 24px; }
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
@@ -663,10 +669,10 @@ a:hover, a:active {
   justify-content: space-between;
   position: relative;
   background-color: #242423;
-  padding: 0 1em; }
+  padding: 0 16px; }
 @media screen and (min-width: 720px) {
     .site-header {
-      padding: 0 2em; } }
+      padding: 0 32px; } }
 .site-branding {
   height: 86px;
   display: flex;
@@ -684,7 +690,7 @@ a:hover, a:active {
       .site-branding img {
         display: block; } }
 .site-title {
-  font-size: 2em;
+  font-size: 32px;
   margin: 0 16px 0 0;
   padding: 0; }
 .site-title a {
@@ -698,7 +704,7 @@ a:hover, a:active {
 @media screen and (min-width: 720px) {
     .main-navigation {
       align-self: flex-end;
-      padding-bottom: .5em; } }
+      padding-bottom: 8px; } }
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

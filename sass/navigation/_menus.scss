@@ -14,19 +14,23 @@
 			position: absolute;
 			top: 100%;
 			left: -999em;
+			background-color: $color__main;
+			border: 1px solid $color__bg-header;
+			border-radius: 0 0 4px 4px;
 			z-index: 99999;
 
 			ul {
 				left: -999em;
-				top: 0;
+				top: 43px;
 			}
 
 			li {
+				border-bottom: 1px solid $color__bg-header;
 
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
-					left: auto;
+					left: 216px;
 				}
 			}
 
@@ -101,7 +105,7 @@
 	background-color: $color__main;
 
 	li {
-		padding: 0 0 .5em 1em;
+		padding: 8px 0 8px 16px;
 	}
 }
 
@@ -122,6 +126,7 @@
 		left: 0;
 
 		li {
+			margin: 0 12px 0 0;
 			padding: 0;
 		}		
 	}
@@ -133,7 +138,7 @@
 .post-navigation {
 
 	.site-main & {
-		margin: 0 0 1.5em;
+		margin: 0 0 24px;
 	}
 
 	.nav-links {

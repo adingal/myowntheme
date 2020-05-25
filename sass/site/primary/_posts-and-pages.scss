@@ -2,6 +2,7 @@
  * Post
  */
 .post {
+	margin-bottom: 32px;
 	border: 1px solid #cfdbd5;
 
 	a {
@@ -94,10 +95,6 @@
 
 .sticky {
 	display: block;
-}
-
-.page {
-	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {

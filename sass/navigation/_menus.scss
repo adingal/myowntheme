@@ -180,12 +180,26 @@
 		display: flex;
 	}
 
+	.nav-previous,
+	.nav-next {
+		background-repeat: no-repeat;
+		background-size: 30px;
+		background-attachment: scroll;
+		font-size: .9em;	
+	}
+
 	.nav-previous {
 		flex: 1 0 50%;
+		background-image: url('assets/img/left-arrow.png');
+		background-position: 0% 50%;
+		padding-left: 35px;
 	}
 
 	.nav-next {
-		text-align: end;
 		flex: 1 0 50%;
+		background-image: url('assets/img/right-arrow.png');
+		background-position: 100% 50%;
+		padding-right: 35px;		
+		text-align: end;
 	}
 }

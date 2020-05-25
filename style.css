@@ -480,16 +480,18 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: #4169e1; }
-a:visited {
-    color: #800080; }
-a:hover, a:focus, a:active {
-    color: #191970; }
-a:focus {
-    outline: thin dotted; }
-a:hover, a:active {
-    outline: 0; }
+/* 
+ * Global link color
+ * Header and footer excluded.
+ */
+.site-main a,
+.widget-area a {
+  text-decoration: none;
+  color: #bb4430; }
+.site-main a:hover, .site-main a:focus,
+  .widget-area a:hover,
+  .widget-area a:focus {
+    text-decoration: underline; }
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -605,14 +607,30 @@ a:hover, a:active {
 .post-navigation .nav-links {
   display: flex; }
 .comment-navigation .nav-previous,
+.comment-navigation .nav-next,
+.posts-navigation .nav-previous,
+.posts-navigation .nav-next,
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-attachment: scroll;
+  font-size: .9em; }
+.comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  flex: 1 0 50%; }
+  flex: 1 0 50%;
+  background-image: url("assets/img/left-arrow.png");
+  background-position: 0% 50%;
+  padding-left: 35px; }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  text-align: end;
-  flex: 1 0 50%; }
+  flex: 1 0 50%;
+  background-image: url("assets/img/right-arrow.png");
+  background-position: 100% 50%;
+  padding-right: 35px;
+  text-align: end; }
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -745,6 +763,7 @@ body {
  * Post
  */
 .post {
+  margin-bottom: 32px;
   border: 1px solid #cfdbd5; }
 .post a {
     text-decoration: none;
@@ -803,8 +822,6 @@ body {
     text-align: center; }
 .sticky {
   display: block; }
-.page {
-  margin: 0 0 1.5em; }
 .updated:not(.published) {
   display: none; }
 .page-content,
@@ -842,10 +859,10 @@ body {
     padding: 0; }
 .site-info a {
     text-decoration: none;
-    color: #e0e0e0; }
+    color: #cfdbd5; }
 .site-info a:hover, .site-info a:active {
       text-decoration: underline;
-      color: #ffffff; }
+      color: #fff; }
 @media screen and (min-width: 720px) {
     .site-info {
       flex-direction: row; } }

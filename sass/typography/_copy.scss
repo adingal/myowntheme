@@ -1,20 +1,25 @@
 p {
-	margin-bottom: 1.5em;
+	margin: 0;
+	margin-bottom: 16px;
+	line-height: 1.5;
 }
 
 dfn,
 cite,
 em,
-i {
+i,
+blockquote {
 	font-style: italic;
 }
 
 blockquote {
-	margin: 0 1.5em;
+	font-size: .9em;
+	margin: 0 24px;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0;
+	margin-bottom: 16px;
 }
 
 pre {
@@ -32,8 +37,10 @@ code,
 kbd,
 tt,
 var {
+	display: inline-block;
 	font-family: $font__code;
-	font-size: 0.9375rem;
+	font-size: .9em;
+	margin: 16px;
 }
 
 abbr,

@@ -329,16 +329,21 @@ h5 {
 h6 {
   font-size: 1.1em; }
 p {
-  margin-bottom: 1.5em; }
+  margin: 0;
+  margin-bottom: 16px;
+  line-height: 1.5; }
 dfn,
 cite,
 em,
-i {
+i,
+blockquote {
   font-style: italic; }
 blockquote {
-  margin: 0 1.5em; }
+  font-size: .9em;
+  margin: 0 24px; }
 address {
-  margin: 0 0 1.5em; }
+  margin: 0;
+  margin-bottom: 16px; }
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", courier, monospace;
@@ -352,8 +357,10 @@ code,
 kbd,
 tt,
 var {
+  display: inline-block;
   font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 0.9375rem; }
+  font-size: .9em;
+  margin: 16px; }
 abbr,
 acronym {
   border-bottom: 1px dotted #666;
@@ -404,7 +411,8 @@ figure {
   margin: 1em 0; }
 table {
   margin: 0 0 1.5em;
-  width: 100%; }
+  width: 100%;
+  text-align: left; }
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/

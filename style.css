@@ -770,13 +770,17 @@ body {
 /*
  * Post
  */
-.post {
+.post,
+.page {
   margin-bottom: 32px;
   border: 1px solid #cfdbd5; }
-.post a {
+.post a,
+  .page a {
     text-decoration: none;
     color: #bb4430; }
-.post a:hover, .post a:focus {
+.post a:hover, .post a:focus,
+    .page a:hover,
+    .page a:focus {
       text-decoration: underline; }
 /*
  * Entry header

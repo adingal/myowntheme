@@ -613,32 +613,52 @@ textarea {
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+@media screen and (min-width: 720px) {
+    .comment-navigation .nav-links,
+    .posts-navigation .nav-links,
+    .post-navigation .nav-links {
+      flex-direction: row;
+      justify-content: space-between; } }
 .comment-navigation .nav-previous,
 .comment-navigation .nav-next,
 .posts-navigation .nav-previous,
 .posts-navigation .nav-next,
 .post-navigation .nav-previous,
 .post-navigation .nav-next {
+  display: block;
+  width: 100%;
   background-repeat: no-repeat;
-  background-size: 30px;
+  background-size: 40px;
   background-attachment: scroll;
-  font-size: .9em; }
+  font-size: .9em;
+  margin-bottom: 8px;
+  padding: 16px; }
+@media screen and (min-width: 720px) {
+    .comment-navigation .nav-previous,
+    .comment-navigation .nav-next,
+    .posts-navigation .nav-previous,
+    .posts-navigation .nav-next,
+    .post-navigation .nav-previous,
+    .post-navigation .nav-next {
+      flex: 0 0 49%; } }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  flex: 1 0 50%;
   background-image: url("assets/img/left-arrow.png");
-  background-position: 0% 50%;
-  padding-left: 35px; }
+  background-position: 2% 50%;
+  padding-left: 60px; }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  flex: 1 0 50%;
   background-image: url("assets/img/right-arrow.png");
-  background-position: 100% 50%;
-  padding-right: 35px;
-  text-align: end; }
+  background-position: 98% 50%;
+  padding-right: 60px;
+  text-align: right; }
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

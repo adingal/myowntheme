@@ -771,16 +771,16 @@ body {
  * Post
  */
 .post,
-.page {
+article.page {
   margin-bottom: 32px;
   border: 1px solid #cfdbd5; }
 .post a,
-  .page a {
+  article.page a {
     text-decoration: none;
     color: #bb4430; }
 .post a:hover, .post a:focus,
-    .page a:hover,
-    .page a:focus {
+    article.page a:hover,
+    article.page a:focus {
       text-decoration: underline; }
 /*
  * Entry header
@@ -832,6 +832,12 @@ body {
     font-size: .9em;
     font-style: italic;
     text-align: center; }
+/*
+ * Entry footer
+ */
+.entry-footer {
+  clear: both;
+  padding: 16px; }
 .sticky {
   display: block; }
 .updated:not(.published) {

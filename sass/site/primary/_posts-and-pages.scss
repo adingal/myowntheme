@@ -2,7 +2,7 @@
  * Post
  */
 .post,
-.page {
+article.page {
 	margin-bottom: 32px;
 	border: 1px solid #cfdbd5;
 
@@ -92,6 +92,14 @@
 		font-style: italic;
 		text-align: center;
 	}
+}
+
+/*
+ * Entry footer
+ */
+.entry-footer {
+	clear: both;
+	padding: 16px;
 }
 
 .sticky {

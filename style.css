@@ -406,7 +406,9 @@ dd {
   margin: 0 1.5em 1.5em; }
 img {
   height: auto;
-  max-width: 100%; }
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; }
 figure {
   margin: 1em 0; }
 table {
@@ -820,11 +822,11 @@ article.page {
     article.page a:hover,
     article.page a:focus {
       text-decoration: underline; }
-.post img,
-  article.page img {
-    display: block;
-    max-width: 100%;
-    margin: 16px auto; }
+/*
+ * Image sizing for index page
+ */
+.hfeed img {
+  padding: 0 32px; }
 /*
  * Entry header
  */

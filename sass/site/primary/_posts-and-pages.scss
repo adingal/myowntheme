@@ -45,12 +45,13 @@ article.page {
 			text-decoration: underline;
 		}
 	}
+}
 
-	img {
-		display: block;
-		max-width: 100%;
-		margin: 16px auto;
-	}
+/*
+ * Image sizing for index page
+ */
+.hfeed img {
+	padding: 0 32px;
 }
 
 /*

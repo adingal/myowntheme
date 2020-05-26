@@ -13,13 +13,8 @@ body {
     margin: 0 auto;
     padding: 24px 12px 12px 12px;
 
-    @media screen and (min-width: $lg) {
-        flex-direction: row;
-        padding: 32px 16px 16px 16px;
-    }
-
     .post-content {
-        flex: 1 0 60%;
+        flex: 1 0 65%;
     }
 
     .widget-area {
@@ -32,4 +27,9 @@ body {
             padding: 8px 0;
         }
     }
+
+    @media screen and (min-width: $lg) {
+        flex-direction: row;
+        padding: 32px 16px 16px 16px;
+    }    
 }

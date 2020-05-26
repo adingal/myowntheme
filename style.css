@@ -729,12 +729,8 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 24px 12px 12px 12px; }
-@media screen and (min-width: 960px) {
-    .site-main {
-      flex-direction: row;
-      padding: 32px 16px 16px 16px; } }
 .site-main .post-content {
-    flex: 1 0 60%; }
+    flex: 1 0 65%; }
 .site-main .widget-area {
     flex: 1 0 30%;
     margin-top: 77px;
@@ -742,6 +738,10 @@ body {
 .site-main .widget-area h2 {
       margin: 0;
       padding: 8px 0; }
+@media screen and (min-width: 960px) {
+    .site-main {
+      flex-direction: row;
+      padding: 32px 16px 16px 16px; } }
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -928,9 +928,50 @@ article.page {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
+  font-size: .9em;
   margin: 0 0 16px 0; }
+.widget .widget-title {
+    font-size: 1.25em; }
 .widget select {
-    max-width: 100%; }
+    max-width: 343px;
+    width: auto; }
+.widget ul {
+    margin: 0 0 0 16px;
+    padding: 0 0 0 16px; }
+.widget li {
+    list-style: disc; }
+.widget form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; }
+.widget input, .widget select {
+    padding: 5px 5px 5px 16px; }
+.widget input[type="submit"],
+  .widget button {
+    min-width: 100px;
+    margin-left: -1px;
+    border-radius: 0 4px 4px 0;
+    padding-left: 5px; }
+@media screen and (min-width: 960px) {
+    .widget select {
+      width: 100%; } }
+.widget_text > div {
+  margin: 0 0 0 16px; }
+.widget_calendar caption {
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center; }
+.widget_calendar thead {
+  font-size: .9em; }
+.widget_calendar tbody {
+  font-size: .8em; }
+.widget_media_video {
+  max-width: 343px;
+  width: 100%;
+  height: auto; }
+.widget_media_video .mejs-controls {
+    display: none; }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

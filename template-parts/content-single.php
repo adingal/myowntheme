@@ -31,7 +31,14 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php myowntheme_post_thumbnail(); ?>
+	<?php 
+	
+	// myowntheme_post_thumbnail();
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail();
+		}
+
+	?>
 
 	<div class="entry-content">
 		<?php

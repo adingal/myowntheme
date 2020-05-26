@@ -734,9 +734,9 @@ body {
       flex-direction: row;
       padding: 32px 16px 16px 16px; } }
 .site-main .post-content {
-    flex: 0 1 65%; }
+    flex: 1 0 60%; }
 .site-main .widget-area {
-    flex: 0 1 30%;
+    flex: 1 0 30%;
     margin-top: 77px;
     padding: 0 16px; }
 .site-main .widget-area h2 {
@@ -817,6 +817,11 @@ article.page {
     article.page a:hover,
     article.page a:focus {
       text-decoration: underline; }
+.post img,
+  article.page img {
+    display: block;
+    max-width: 100%;
+    margin: 16px auto; }
 /*
  * Entry header
  */

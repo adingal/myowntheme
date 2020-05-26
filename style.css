@@ -794,7 +794,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap; }
 .post-wrapper .post-content {
-    flex: 0 0 65%; }
+    flex: 1 0 65%; }
 .post-wrapper .widget-area {
     flex: 0 0 30%;
     margin-top: 0px;

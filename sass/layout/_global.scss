@@ -7,29 +7,6 @@ body {
 
 .site-main {
     max-width: $xl;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     margin: 0 auto;
-    padding: 24px 12px 12px 12px;
-
-    .post-content {
-        flex: 1 0 65%;
-    }
-
-    .widget-area {
-        flex: 1 0 30%;
-        margin-top: 77px;
-        padding: 0 16px;
-
-        h2 {
-            margin: 0;
-            padding: 8px 0;
-        }
-    }
-
-    @media screen and (min-width: $lg) {
-        flex-direction: row;
-        padding: 32px 16px 16px 16px;
-    }    
+    padding: 24px 12px 12px 12px; 
 }

@@ -1,10 +1,40 @@
 /*
  * Post
  */
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+	
+    .post-content {
+        flex: 0 0 65%;
+    }
+
+    .widget-area {
+        flex: 0 0 30%;
+		margin-top: 0px;
+        padding: 0 16px;
+
+        h2 {
+            margin: 0;
+            padding: 8px 0;
+		}	
+    }
+
+    @media screen and (min-width: $lg) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 32px 16px 16px 16px;		
+
+		.widget-area {
+			margin-top: 77px;
+		}
+    }	
+}
+
 .post,
 article.page {
 	margin-bottom: 32px;
-	border: 1px solid #cfdbd5;
 
 	a {
 		text-decoration: none;
@@ -84,7 +114,7 @@ article.page {
  * Entry content
  */
 .entry-content {
-	padding: 16px;
+	padding: 16px 32px;
 	overflow: hidden;
 
 	div,

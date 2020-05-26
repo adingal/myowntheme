@@ -729,7 +729,7 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 24px 12px 12px 12px; }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 960px) {
     .site-main {
       flex-direction: row;
       padding: 32px 16px 16px 16px; } }

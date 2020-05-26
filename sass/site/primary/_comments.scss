@@ -1,7 +1,58 @@
-.comment-content a {
-	word-wrap: break-word;
+.comments-title {
+	font-size: 1.25em;
+	padding: 0 32px;
 }
 
-.bypostauthor {
-	display: block;
+.comment-list {
+	margin: 0 16px;
+
+	li {
+		list-style: none;
+	}
+}
+
+.comment-body {
+	margin-bottom: 8px;
+	padding: 16px;
+}
+
+.comment-author {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: .9em;
+	margin-bottom: 8px;
+
+	img {
+		display: block;
+		width: auto;
+		height: auto;
+		margin: 0 8px 0 0;
+		padding: 0;
+	}
+
+	.fn {
+		margin: 0 4px 0 0;
+	}
+}
+
+.comment-metadata {
+	font-size: .7em;
+	margin: 0 0 8px 0;
+}
+
+.comment-content,
+.reply {
+	font-size: .8em;
+}
+
+.odd {
+	border-top: 1px solid #cfdbd5;
+	border-left: 1px solid #cfdbd5;
+}
+.even {
+	border-top: 1px solid #f5cb5c;
+	border-left: 1px solid #f5cb5c;
 }

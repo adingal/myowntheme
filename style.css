@@ -891,6 +891,11 @@ article.page {
     font-style: italic;
     text-align: center; }
 /*
+ * Featured image
+ */
+.featured-image {
+  margin: 0; }
+/*
  * Edit post link
  */
 .edit-post-link {

@@ -31,14 +31,12 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php 
-	
-	// myowntheme_post_thumbnail();
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		}
 
-	?>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="featured-image">
+			<?php the_post_thumbnail(); ?>
+		</figure>
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php

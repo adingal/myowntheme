@@ -45,20 +45,25 @@ article.page {
 			text-decoration: underline;
 		}
 	}
+
+	.attachment-post-thumbnail {
+		margin-bottom: 16px;
+	}
 }
 
 /*
  * Image sizing for index page
  */
 .hfeed img {
-	padding: 0 32px;
+	padding: 0;
 }
 
 /*
  * Entry header
  */
 .entry-header {
-	padding: 0 16px;
+	margin: 0;
+	padding: 0;
 
 	.entry-title,
 	.entry-meta p {
@@ -106,16 +111,12 @@ article.page {
 		}
 	}
 
-	@media screen and (min-width: $lg) {
-		padding: 0 32px;
-	}
 }
 
 /*
  * Entry content
  */
 .entry-content {
-	padding: 16px 32px;
 	overflow: hidden;
 
 	div,

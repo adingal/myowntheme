@@ -821,16 +821,20 @@ article.page {
     article.page a:hover,
     article.page a:focus {
       text-decoration: underline; }
+.post .attachment-post-thumbnail,
+  article.page .attachment-post-thumbnail {
+    margin-bottom: 16px; }
 /*
  * Image sizing for index page
  */
 .hfeed img {
-  padding: 0 32px; }
+  padding: 0; }
 /*
  * Entry header
  */
 .entry-header {
-  padding: 0 16px; }
+  margin: 0;
+  padding: 0; }
 .entry-header .entry-title,
   .entry-header .entry-meta p {
     margin: 0;
@@ -859,14 +863,10 @@ article.page {
       background-image: url("assets/img/folder.png"); }
 .entry-header .entry-meta .tags {
       background-image: url("assets/img/tag.png"); }
-@media screen and (min-width: 960px) {
-    .entry-header {
-      padding: 0 32px; } }
 /*
  * Entry content
  */
 .entry-content {
-  padding: 16px 32px;
   overflow: hidden; }
 .entry-content div,
   .entry-content p {
@@ -897,9 +897,10 @@ article.page {
 --------------------------------------------------------------*/
 .comments-title {
   font-size: 1.25em;
-  padding: 0 32px; }
+  padding: 0; }
 .comment-list {
-  margin: 0 16px; }
+  margin: 0;
+  padding: 0; }
 .comment-list li {
     list-style: none; }
 .comment-body {

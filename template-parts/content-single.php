@@ -64,6 +64,12 @@
 				)
 			);
 		?>
+
+		<?php if ( is_super_admin() ) : ?>
+			<span class="edit-post-link">
+				<?php edit_post_link( 'Edit' ); ?>
+			</span>
+		<?php endif; ?>
 	</div><!-- .entry-content -->
 	
 </article><!-- #post-<?php the_ID(); ?> -->

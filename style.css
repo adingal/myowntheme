@@ -912,6 +912,8 @@ article.page {
 /*
  * Comment list
  */
+.comments-area {
+  max-width: 1140px; }
 .comments-title {
   font-size: 1.25em;
   padding: 0; }

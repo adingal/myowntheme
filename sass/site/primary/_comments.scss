@@ -1,6 +1,10 @@
 /*
  * Comment list
  */
+.comments-area {
+	max-width: $xl;
+}
+
 .comments-title {
 	font-size: 1.25em;
 	padding: 0;

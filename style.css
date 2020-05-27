@@ -734,6 +734,7 @@ body {
   background-attachment: scroll; }
 .site-main {
   max-width: 1140px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 24px 12px 12px 12px; }
 /*--------------------------------------------------------------

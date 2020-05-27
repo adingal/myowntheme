@@ -573,8 +573,8 @@ textarea {
 .menu {
   position: absolute;
   top: 86px;
-  right: 0;
-  left: 0;
+  right: -18px;
+  left: -18px;
   background-color: #242423; }
 .menu li {
     padding: 8px 16px; }
@@ -751,7 +751,11 @@ body {
       .site-featured-image img {
         height: auto; } }
 .site-header {
-  background-color: #242423; }
+  background-color: #242423;
+  padding: 0 1em; }
+@media screen and (min-width: 720px) {
+    .site-header {
+      padding: 0 2em; } }
 .site-header-wrapper {
   max-width: 1140px;
   display: flex;

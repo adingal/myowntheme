@@ -14,18 +14,19 @@
 }
 
 .site-header {
+    background-color: $color__main;
+}
+
+.site-header-wrapper {
+    max-width: $xl;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: $color__main;
-    padding: 0 16px;
-
-    @media screen and (min-width: $md) {
-        padding: 0 32px;
-    }
+    margin: 0 auto;
+    padding: 0;    
 }
 
 .site-branding {

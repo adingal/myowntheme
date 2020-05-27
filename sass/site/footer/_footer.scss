@@ -9,12 +9,14 @@
 }
 
 .site-info {
+    max-width: $xl;
     height: 70px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 
     p {
         margin: 0;

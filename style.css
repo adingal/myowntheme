@@ -751,17 +751,17 @@ body {
       .site-featured-image img {
         height: auto; } }
 .site-header {
+  background-color: #242423; }
+.site-header-wrapper {
+  max-width: 1140px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  background-color: #242423;
-  padding: 0 16px; }
-@media screen and (min-width: 720px) {
-    .site-header {
-      padding: 0 32px; } }
+  margin: 0 auto;
+  padding: 0; }
 .site-branding {
   height: 86px;
   display: flex;
@@ -988,12 +988,14 @@ p.comment-form-cookies-consent input[type="checkbox"] {
     .site-footer {
       padding: 0 2em; } }
 .site-info {
+  max-width: 1140px;
   height: 70px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 0 auto; }
 .site-info p {
     margin: 0;
     padding: 0; }

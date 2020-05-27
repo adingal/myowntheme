@@ -966,8 +966,7 @@ p.comment-form-cookies-consent {
   align-items: center;
   justify-content: flex-start; }
 p.comment-form-cookies-consent input[type="checkbox"] {
-    margin: 0;
-    margin-right: 8px; }
+    margin: 0 8px 8px 0; }
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

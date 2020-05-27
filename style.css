@@ -895,6 +895,9 @@ article.page {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+/*
+ * Comment list
+ */
 .comments-title {
   font-size: 1.25em;
   padding: 0; }
@@ -934,6 +937,37 @@ article.page {
 .even {
   border-top: 1px solid #f5cb5c;
   border-left: 1px solid #f5cb5c; }
+/*
+ * Comment form
+ */
+.comment-respond {
+  font-size: .8em;
+  margin: 0; }
+.comment-respond p {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+.comment-respond label {
+    display: block; }
+.comment-respond input[type="submit"] {
+    height: 38px;
+    max-width: 200px;
+    width: 150px;
+    padding: 8px 8px 5px 8px; }
+.comment-reply-title {
+  font-size: 1.25em;
+  margin: 16px 0 8px 0;
+  padding: 0; }
+p.comment-notes {
+  display: block; }
+p.comment-form-cookies-consent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; }
+p.comment-form-cookies-consent input[type="checkbox"] {
+    margin: 0;
+    margin-right: 8px; }
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

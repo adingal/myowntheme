@@ -426,22 +426,22 @@ input[type="submit"] {
   border-radius: 3px;
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 0.75rem;
+  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1;
   padding: 0.6em 1em 0.4em; }
-button:hover,
+button:hover, button:active, button:focus,
   input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
-button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
+  input[type="reset"]:hover,
   input[type="reset"]:active,
   input[type="reset"]:focus,
+  input[type="submit"]:hover,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb; }
+    background-color: #bb4430;
+    color: #ffffff; }
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -458,31 +458,63 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px; }
-input[type="text"]:focus,
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  font-size: 1.125rem;
+  border: 1px solid #cfdbd5;
+  border-radius: 4px;
+  padding: 8px 5px 5px 5px;
+  overflow: hidden; }
+input[type="text"]:focus, input[type="text"]:active,
   input[type="email"]:focus,
+  input[type="email"]:active,
   input[type="url"]:focus,
+  input[type="url"]:active,
   input[type="password"]:focus,
+  input[type="password"]:active,
   input[type="search"]:focus,
+  input[type="search"]:active,
   input[type="number"]:focus,
+  input[type="number"]:active,
   input[type="tel"]:focus,
+  input[type="tel"]:active,
   input[type="range"]:focus,
+  input[type="range"]:active,
   input[type="date"]:focus,
+  input[type="date"]:active,
   input[type="month"]:focus,
+  input[type="month"]:active,
   input[type="week"]:focus,
+  input[type="week"]:active,
   input[type="time"]:focus,
+  input[type="time"]:active,
   input[type="datetime"]:focus,
+  input[type="datetime"]:active,
   input[type="datetime-local"]:focus,
+  input[type="datetime-local"]:active,
   input[type="color"]:focus,
-  textarea:focus {
-    color: #111; }
+  input[type="color"]:active,
+  textarea:focus,
+  textarea:active {
+    background-color: #f1f1f1;
+    border: 1px solid #bb4430;
+    outline: none; }
 select {
-  border: 1px solid #ccc; }
-textarea {
-  width: 100%; }
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  font-size: 1.125rem;
+  border: 1px solid #cfdbd5;
+  border-radius: 4px;
+  padding: 8px 5px 5px 5px;
+  overflow: hidden; }
+select:focus, select:active {
+    background-color: #f1f1f1;
+    border: 1px solid #bb4430;
+    outline: none; }
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -979,7 +1011,7 @@ article.page {
     flex-wrap: wrap; }
 .comment-respond label {
     display: block; }
-.comment-respond input[type="submit"] {
+.comment-respond .form-submit input[type="submit"] {
     height: 38px;
     max-width: 200px;
     width: 150px;
@@ -1035,62 +1067,15 @@ p.comment-form-cookies-consent input[type="checkbox"] {
 # Widgets
 --------------------------------------------------------------*/
 .widget-area,
-.entry-content {
+.entry-content,
+.comments-area {
   font-size: 18px;
   font-size: 1.125rem; }
 .widget-area section,
-  .entry-content section {
+  .entry-content section,
+  .comments-area section {
     margin: 0 0 16px 0;
     padding: 0; }
-.widget-area input[type="text"],
-  .widget-area input[type="search"],
-  .widget-area input[type="email"],
-  .widget-area input[type="date"],
-  .widget-area input[type="datetime-local"],
-  .widget-area input[type="month"],
-  .widget-area input[type="number"],
-  .widget-area input[type="password"],
-  .widget-area input[type="submit"],
-  .widget-area input[type="tel"],
-  .widget-area input[type="time"],
-  .widget-area input[type="url"],
-  .widget-area input[type="week"],
-  .entry-content input[type="text"],
-  .entry-content input[type="search"],
-  .entry-content input[type="email"],
-  .entry-content input[type="date"],
-  .entry-content input[type="datetime-local"],
-  .entry-content input[type="month"],
-  .entry-content input[type="number"],
-  .entry-content input[type="password"],
-  .entry-content input[type="submit"],
-  .entry-content input[type="tel"],
-  .entry-content input[type="time"],
-  .entry-content input[type="url"],
-  .entry-content input[type="week"] {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    font-size: 1.125rem;
-    border: 1px solid #cfdbd5;
-    border-radius: 4px;
-    padding: 8px 5px 5px 5px;
-    overflow: hidden; }
-.widget-area select,
-  .entry-content select {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    font-size: 1.125rem;
-    border: 1px solid #cfdbd5;
-    border-radius: 4px;
-    padding: 8px 5px 5px 5px;
-    overflow: hidden; }
-.widget-area button,
-  .entry-content button {
-    display: none; }
 .widget-title {
   font-size: 30px;
   font-size: 1.875rem;

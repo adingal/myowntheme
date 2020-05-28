@@ -1,48 +1,11 @@
 .widget-area,
-.entry-content {
+.entry-content,
+.comments-area {
 	@include font-size(.9);
 
 	section {
 		margin: 0 0 16px 0;
 		padding: 0;
-	}
-
-	input[type="text"],
-	input[type="search"],
-	input[type="email"],
-	input[type="date"],
-	input[type="datetime-local"],
-	input[type="month"],
-	input[type="number"],
-	input[type="password"],
-	input[type="submit"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	input[type="week"] {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-		@include font-size(.9);
-		border: 1px solid $color__header-link;
-		border-radius: 4px;
-		padding: 8px 5px 5px 5px;
-		overflow: hidden;
-	}
-
-	select {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-		@include font-size(.9);
-		border: 1px solid $color__header-link;
-		border-radius: 4px;		
-		padding: 8px 5px 5px 5px;
-		overflow: hidden;		
-	}
-
-	button {
-		display: none;
 	}
 }
 

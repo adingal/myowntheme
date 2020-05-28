@@ -299,7 +299,7 @@ textarea {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5; }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 986px) {
     body,
     button,
     input,
@@ -603,7 +603,7 @@ textarea {
     padding-right: 25px; }
   .sub-menu > li {
     padding-right: 25px; } }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 986px) {
   .main-navigation ul ul ul {
     top: 46px; } }
 /* Comment and post navigation */
@@ -815,7 +815,7 @@ body {
     flex: 0 0 30%;
     margin-top: 0px;
     padding: 0 16px; }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 986px) {
     .post-wrapper {
       flex-direction: row;
       justify-content: space-between;

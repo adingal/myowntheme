@@ -7,18 +7,14 @@
 	flex-wrap: wrap;
 	
     .post-content {
-        flex: 1 0 65%;
+        flex: 0 0 65%;
     }
 
     .widget-area {
+		max-width: 100%;
         flex: 0 0 30%;
 		margin-top: 0px;
         padding: 0 16px;
-
-        h2 {
-            margin: 0;
-            padding: 8px 0;
-		}	
     }
 
     @media screen and (min-width: $lg) {
@@ -27,7 +23,8 @@
 		padding: 32px 16px 16px 16px;		
 
 		.widget-area {
-			margin-top: 77px;
+			max-width: 30%;
+			margin-top: 76px;
 		}
     }	
 }

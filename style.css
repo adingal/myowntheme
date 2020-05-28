@@ -809,21 +809,20 @@ body {
   flex-direction: column;
   flex-wrap: wrap; }
 .post-wrapper .post-content {
-    flex: 1 0 65%; }
+    flex: 0 0 65%; }
 .post-wrapper .widget-area {
+    max-width: 100%;
     flex: 0 0 30%;
     margin-top: 0px;
     padding: 0 16px; }
-.post-wrapper .widget-area h2 {
-      margin: 0;
-      padding: 8px 0; }
 @media screen and (min-width: 960px) {
     .post-wrapper {
       flex-direction: row;
       justify-content: space-between;
       padding: 32px 16px 16px 16px; }
       .post-wrapper .widget-area {
-        margin-top: 77px; } }
+        max-width: 30%;
+        margin-top: 76px; } }
 .post,
 article.page {
   margin-bottom: 32px; }
@@ -1030,51 +1029,175 @@ p.comment-form-cookies-consent input[type="checkbox"] {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-  font-size: .9em;
-  margin: 0 0 16px 0; }
-.widget .widget-title {
-    font-size: 1.25em; }
-.widget select {
-    max-width: 343px;
-    width: auto; }
-.widget ul {
-    margin: 0 0 0 16px;
-    padding: 0 0 0 16px; }
-.widget li {
-    list-style: disc; }
-.widget form {
+.widget-area {
+  font-size: 18px;
+  font-size: 1.125rem; }
+.widget-area section {
+    margin: 0 0 16px 0;
+    padding: 0; }
+.widget-area input[type="text"],
+  .widget-area input[type="search"],
+  .widget-area input[type="email"],
+  .widget-area input[type="date"],
+  .widget-area input[type="datetime-local"],
+  .widget-area input[type="month"],
+  .widget-area input[type="number"],
+  .widget-area input[type="password"],
+  .widget-area input[type="submit"],
+  .widget-area input[type="tel"],
+  .widget-area input[type="time"],
+  .widget-area input[type="url"],
+  .widget-area input[type="week"] {
+    max-width: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; }
-.widget input, .widget select {
-    padding: 5px 5px 5px 16px; }
-.widget input[type="submit"],
-  .widget button {
-    min-width: 100px;
-    margin-left: -1px;
-    border-radius: 0 4px 4px 0;
-    padding-left: 5px; }
-@media screen and (min-width: 960px) {
-    .widget select {
-      width: 100%; } }
-.widget_text > div {
-  margin: 0 0 0 16px; }
-.widget_calendar caption {
-  font-size: 1em;
-  font-weight: 700;
-  text-align: center; }
-.widget_calendar thead {
-  font-size: .9em; }
-.widget_calendar tbody {
-  font-size: .8em; }
-.widget_media_video {
-  max-width: 343px;
+    height: auto;
+    font-size: 18px;
+    font-size: 1.125rem;
+    border: 1px solid #cfdbd5;
+    border-radius: 4px;
+    padding: 8px 5px 5px 5px;
+    overflow: hidden; }
+.widget-area select {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    font-size: 1.125rem;
+    border: 1px solid #cfdbd5;
+    border-radius: 4px;
+    padding: 8px 5px 5px 5px;
+    overflow: hidden; }
+.widget-title {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin: 0;
+  padding: 8px 0 0 0; }
+/*
+ * Archive, Categories, Pages, Meta, Comments, Post, Rss
+ */
+.widget_archive li,
+.widget_categories li,
+.widget_pages li,
+.widget_meta li,
+.widget_recent_comments li,
+.widget_recent_entries li,
+.widget_rss li {
+  list-style: disc; }
+.widget_archive li ul,
+  .widget_categories li ul,
+  .widget_pages li ul,
+  .widget_meta li ul,
+  .widget_recent_comments li ul,
+  .widget_recent_entries li ul,
+  .widget_rss li ul {
+    margin-left: 8px; }
+.widget_archive li ul li,
+    .widget_categories li ul li,
+    .widget_pages li ul li,
+    .widget_meta li ul li,
+    .widget_recent_comments li ul li,
+    .widget_recent_entries li ul li,
+    .widget_rss li ul li {
+      list-style: circle; }
+/*
+ * Calendar
+ */
+.widget_calendar .calendar_wrap {
+  border: 1px solid #cfdbd5;
+  border-radius: 4px;
+  padding: 5px; }
+.widget_calendar .wp-calendar-table {
   width: 100%;
-  height: auto; }
-.widget_media_video .mejs-controls {
-    display: none; }
+  text-align: center;
+  margin: 0;
+  border-spacing: 0;
+  border-collapse: collapse; }
+.widget_calendar .wp-calendar-table caption {
+    border-bottom: 1px solid #cfdbd5;
+    margin: 0; }
+.widget_calendar .wp-calendar-table td {
+    border: 1px solid #cfdbd5;
+    padding: 0; }
+.widget_calendar .wp-calendar-table td:hover, .widget_calendar .wp-calendar-table td:focus {
+      background-color: #cfdbd5;
+      cursor: pointer; }
+.widget_calendar .wp-calendar-nav {
+  padding: 5px 5px 0 5px; }
+/*
+ * Rss
+ */
+.widget_rss h2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end; }
+.widget_rss h2 img {
+    margin-left: 8px; }
+/*
+ * Search
+ */
+.widget_search form {
+  width: 100%; }
+.widget_search input {
+  width: 100%;
+  border: 1px solid #cfdbd5;
+  padding: 8px 5px 5px 5px; }
+.widget_search .search-submit {
+  display: none; }
+/*
+ * Nav menu
+ */
+.widget_nav_menu {
+  display: block;
+  width: 100%; }
+.widget_nav_menu .menu {
+    background-color: #333533;
+    border: 1px solid #cfdbd5;
+    border-radius: 4px; }
+.widget_nav_menu ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+.widget_nav_menu ul ul {
+      box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 100%;
+      left: -999em;
+      background-color: #333533;
+      border: 1px solid #666;
+      border-radius: 0 0 4px 4px;
+      z-index: 99999; }
+.widget_nav_menu ul ul ul {
+        left: -999em;
+        top: 43px; }
+.widget_nav_menu ul ul li {
+        border-bottom: 1px solid #666; }
+.widget_nav_menu ul ul li:last-of-type {
+          border: none; }
+.widget_nav_menu ul ul li:hover > ul,
+        .widget_nav_menu ul ul li.focus > ul {
+          display: block;
+          left: -1px; }
+.widget_nav_menu ul ul a {
+        width: 200px; }
+.widget_nav_menu ul li:hover > ul,
+    .widget_nav_menu ul li.focus > ul {
+      left: auto; }
+.widget_nav_menu li {
+    position: relative; }
+.widget_nav_menu a {
+    display: block;
+    text-decoration: none;
+    color: #cfdbd5; }
+.widget_nav_menu a:hover, .widget_nav_menu a:focus {
+      color: #fff; }
+.widget_nav_menu .current_page_item > a,
+  .widget_nav_menu .current-menu-item > a,
+  .widget_nav_menu .current_page_ancestor > a,
+  .widget_nav_menu .current-menu-ancestor > a {
+    color: #fff; }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

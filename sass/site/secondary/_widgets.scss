@@ -1,79 +1,229 @@
-.widget {
-	font-size: .9em;
-	margin: 0 0 16px 0;
+.widget-area {
+	@include font-size(.9);
 
-	.widget-title {
-		font-size: 1.25em;
+	section {
+		margin: 0 0 16px 0;
+		padding: 0;
+	}
+
+	input[type="text"],
+	input[type="search"],
+	input[type="email"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="submit"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"] {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		@include font-size(.9);
+		border: 1px solid $color__header-link;
+		border-radius: 4px;
+		padding: 8px 5px 5px 5px;
+		overflow: hidden;
 	}
 
 	select {
-		max-width: 343px;
-		width: auto;
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		@include font-size(.9);
+		border: 1px solid $color__header-link;
+		border-radius: 4px;		
+		padding: 8px 5px 5px 5px;
+		overflow: hidden;		
 	}
+}
 
-	ul {
-		margin: 0 0 0 16px;
-		padding: 0 0 0 16px;
-	}
+.widget-title {
+	@include font-size(1.5);
+	margin: 0;
+	padding: 8px 0 0 0;
+}
 
+/*
+ * Archive, Categories, Pages, Meta, Comments, Post, Rss
+ */
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_meta,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_rss {
 	li {
 		list-style: disc;
-	}
 
-	form {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-	}
+		ul {
+			margin-left: 8px;
 
-	input, select {
-		padding: 5px 5px 5px 16px;
-	}
-
-	input[type="submit"],
-	button {
-		min-width: 100px;
-		margin-left: -1px;
-		border-radius: 0 4px 4px 0;
-		padding-left: 5px;
-	}
-
-	@media screen and (min-width: $lg) {
-		select {
-			width: 100%;
+			li {
+				list-style: circle;
+			}
 		}
 	}
 }
 
-.widget_text {
-	> div {
-		margin: 0 0 0 16px;
-	}
-}
-
+/*
+ * Calendar
+ */
 .widget_calendar {
-	caption {
-		font-size: 1em;
-		font-weight: 700;
+	.calendar_wrap {
+		border: 1px solid $color__header-link;
+		border-radius: 4px;
+		padding: 5px;
+	}
+
+	.wp-calendar-table {
+		width: 100%;
 		text-align: center;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+
+		caption {
+			border-bottom: 1px solid $color__header-link;
+			margin: 0;
+		}
+
+		td {
+			border: 1px solid $color__header-link;
+			padding: 0;
+
+			&:hover,
+			&:focus {
+				background-color: $color__header-link;
+				cursor: pointer;
+			}
+		}
 	}
 
-	thead {
-		font-size: .9em;
-	}
-
-	tbody {
-		font-size: .8em;
+	.wp-calendar-nav {
+		padding: 5px 5px 0 5px;
 	}
 }
 
-.widget_media_video {
-	max-width: 343px;
-	width: 100%;
-	height: auto;
+/*
+ * Rss
+ */
+.widget_rss {
+	h2 {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: flex-end;
 
-	.mejs-controls {
+		img {
+			margin-left: 8px;
+		}
+	}
+}
+
+/*
+ * Search
+ */
+.widget_search {
+
+	form {
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+		border: 1px solid $color__header-link;
+		padding: 8px 5px 5px 5px;
+	}
+
+	.search-submit {
 		display: none;
+	}
+}
+
+/*
+ * Nav menu
+ */
+.widget_nav_menu {
+	display: block;
+	width: 100%;
+
+	.menu {
+		background-color: #333533;
+		border: 1px solid $color__header-link;
+		border-radius: 4px;
+	}
+
+	ul {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			background-color: #333533;
+			border: 1px solid $color__text-input;
+			border-radius: 0 0 4px 4px;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 43px;
+			}
+
+			li {
+				border-bottom: 1px solid $color__text-input;
+
+				&:last-of-type {
+					border: none;
+				}
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: -1px;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: $color__header-link;
+
+		&:hover,
+		&:focus {
+			color: $color__background-body;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__background-body;
 	}
 }

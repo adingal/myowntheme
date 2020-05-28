@@ -995,6 +995,9 @@ p.comment-form-cookies-consent {
   justify-content: flex-start; }
 p.comment-form-cookies-consent input[type="checkbox"] {
     margin: 0 8px 8px 0; }
+@media screen and (min-width: 580px) {
+    p.comment-form-cookies-consent input[type="checkbox"] {
+      margin: 0 8px 0 0; } }
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

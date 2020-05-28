@@ -5,7 +5,9 @@ body {
     background-attachment: scroll;
 }
 
-.site-main {
+.site-main,
+.widget-area,
+.site-header-wrapper {
     max-width: $xl;
     min-width: 320px;
     margin: 0 auto;

@@ -23,14 +23,12 @@
 }
 
 .site-header-wrapper {
-    max-width: $xl;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin: 0 auto;
     padding: 0;    
 }
 

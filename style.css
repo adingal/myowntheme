@@ -732,7 +732,9 @@ body {
   background-repeat: repeat;
   background-position: top left;
   background-attachment: scroll; }
-.site-main {
+.site-main,
+.widget-area,
+.site-header-wrapper {
   max-width: 1140px;
   min-width: 320px;
   margin: 0 auto;
@@ -757,14 +759,12 @@ body {
     .site-header {
       padding: 0 2em; } }
 .site-header-wrapper {
-  max-width: 1140px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin: 0 auto;
   padding: 0; }
 .site-branding {
   height: 86px;

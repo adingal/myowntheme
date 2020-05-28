@@ -1032,10 +1032,12 @@ p.comment-form-cookies-consent input[type="checkbox"] {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget-area {
+.widget-area,
+.entry-content {
   font-size: 18px;
   font-size: 1.125rem; }
-.widget-area section {
+.widget-area section,
+  .entry-content section {
     margin: 0 0 16px 0;
     padding: 0; }
 .widget-area input[type="text"],
@@ -1050,7 +1052,20 @@ p.comment-form-cookies-consent input[type="checkbox"] {
   .widget-area input[type="tel"],
   .widget-area input[type="time"],
   .widget-area input[type="url"],
-  .widget-area input[type="week"] {
+  .widget-area input[type="week"],
+  .entry-content input[type="text"],
+  .entry-content input[type="search"],
+  .entry-content input[type="email"],
+  .entry-content input[type="date"],
+  .entry-content input[type="datetime-local"],
+  .entry-content input[type="month"],
+  .entry-content input[type="number"],
+  .entry-content input[type="password"],
+  .entry-content input[type="submit"],
+  .entry-content input[type="tel"],
+  .entry-content input[type="time"],
+  .entry-content input[type="url"],
+  .entry-content input[type="week"] {
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -1060,7 +1075,8 @@ p.comment-form-cookies-consent input[type="checkbox"] {
     border-radius: 4px;
     padding: 8px 5px 5px 5px;
     overflow: hidden; }
-.widget-area select {
+.widget-area select,
+  .entry-content select {
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -1070,6 +1086,9 @@ p.comment-form-cookies-consent input[type="checkbox"] {
     border-radius: 4px;
     padding: 8px 5px 5px 5px;
     overflow: hidden; }
+.widget-area button,
+  .entry-content button {
+    display: none; }
 .widget-title {
   font-size: 30px;
   font-size: 1.875rem;

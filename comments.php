@@ -71,7 +71,13 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	$args = array(
+		'comment_notes_before' => 'Your email will not be published.',
+		'label_submit' => 'Submit',
+		'title_reply' => 'Leave a comment',
+	);
+
+	comment_form( $args );
 	?>
 
 </div><!-- #comments -->

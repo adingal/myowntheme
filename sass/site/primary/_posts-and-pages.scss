@@ -1,12 +1,14 @@
 /*
  * Post
  */
-.post-wrapper {
+.post-wrapper,
+.index-wrapper {
     display: flex;
     flex-direction: column;
 	flex-wrap: wrap;
 	
-    .post-content {
+	.post-content,
+	.index-content {
         flex: 0 0 65%;
     }
 

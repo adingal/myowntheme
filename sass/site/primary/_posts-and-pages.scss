@@ -35,16 +35,6 @@
 article.page {
 	margin-bottom: 32px;
 
-	a {
-		text-decoration: none;
-		color: $color__input-hover;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
-
 	.attachment-post-thumbnail {
 		margin-bottom: 16px;
 	}
@@ -116,6 +106,8 @@ article.page {
  * Entry content
  */
 .entry-content {
+	position: relative;
+	padding-bottom: 50px;
 	overflow: hidden;
 
 	div,
@@ -129,6 +121,19 @@ article.page {
 		font-style: italic;
 		text-align: center;
 	}
+
+	a.continue-reading {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		text-decoration: none;
+		padding: 8px 12px;
+	}
+}
+
+.single .entry-content {
+	padding: 0;
 }
 
 /*

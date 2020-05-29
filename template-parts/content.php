@@ -59,9 +59,25 @@
 				)
 			);
 		else :
+			$continue_reading =	sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'myowntheme' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			);
 
 			the_excerpt();
-
+		?>
+			<a href="<?php the_permalink(); ?>" class="continue-reading">
+				<?php echo $continue_reading; ?>
+			</a>
+		<?php
 		endif;
 		
 		?>

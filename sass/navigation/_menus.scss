@@ -234,6 +234,8 @@
 
 .pagination {
 	margin-bottom: 32px;
+	border-top: 1px solid $color__bg-header;
+	padding-top: 8px;
 
 	.nav-links {
 		display: flex;

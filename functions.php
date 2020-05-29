@@ -243,8 +243,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Remove website input on comment form
  */
-function remove_website_field($fields) {
-    unset($fields['url']);
+function myowntheme_remove_website_field( $fields ) {
+    unset( $fields['url'] );
     return $fields;
 }
-add_filter('comment_form_default_fields', 'remove_website_field');
+add_filter('comment_form_default_fields', 'myowntheme_remove_website_field');
+
+/**
+ * Modify excerpt more.
+ */
+function myowntheme_excerpt_more( $more ) {
+    return "...";
+}
+add_filter('excerpt_more', 'myowntheme_excerpt_more');

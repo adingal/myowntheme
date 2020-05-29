@@ -775,11 +775,18 @@ select:focus, select:active {
 /*--------------------------------------------------------------
 ## Global layout
 --------------------------------------------------------------*/
+html {
+  height: 100%; }
 body {
+  height: 100%;
   background-image: url("assets/img/paper.png");
   background-repeat: repeat;
   background-position: top left;
   background-attachment: scroll; }
+.site {
+  height: 100%; }
+.site-main {
+  height: auto; }
 .site-main,
 .widget-area,
 .site-header-wrapper {

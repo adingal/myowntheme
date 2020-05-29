@@ -879,7 +879,7 @@ body {
         margin-top: 76px; } }
 .post,
 article.page {
-  margin-bottom: 32px; }
+  margin-bottom: 24px; }
 .post .attachment-post-thumbnail,
   article.page .attachment-post-thumbnail {
     margin-bottom: 16px; }
@@ -927,7 +927,7 @@ article.page {
  */
 .entry-content {
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   overflow: hidden; }
 .entry-content div,
   .entry-content p {

@@ -18,38 +18,62 @@ get_header();
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'myowntheme' ); ?></p>
+				<p><?php esc_html_e( 'It looks like nothing was found. Try one of the links below or search again?', 'myowntheme' ); ?></p>
 
-					<?php
-					get_search_form();
+				<?php get_search_form(); ?>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+				<div class="recent-post">
+					<h2>Recent Posts</h2>
+					<div class="suggestions">
+						<?php
+						$args = array(
+							'posts_per_page' => 3,
+							'ignore_sticky_posts' => 1,
+						);
+						$recent_post = new WP_Query( $args );
+						
+						if ( $recent_post->have_posts() ) :
+							while ( $recent_post->have_posts() ) :
+								$recent_post->the_post();
+						?>
+					
+						<div class="suggestion-item entry-content">
+							<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p class="suggestion-content">
+								<?php
+								$excerpt = get_the_excerpt();
+			
+								$excerpt = substr($excerpt, 0, 220);
+								$result = substr($excerpt, 0, strrpos($excerpt, ' '));
+								echo esc_html( $result . '...', 'myowntheme' );
+								?>
+							</p>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'myowntheme' ); ?></h2>
-						<ul>
 							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
+							$continue_reading =	sprintf(
+								wp_kses(
+									/* translators: %s: Name of current post. Only visible to screen readers */
+									__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'myowntheme' ),
+									array(
+										'span' => array(
+											'class' => array(),
+										),
+									)
+								),
+								wp_kses_post( get_the_title() )
 							);
-							?>
-						</ul>
-					</div><!-- .widget -->
+							?>						
+							<a href="<?php the_permalink(); ?>" class="continue-reading">
+								<?php echo $continue_reading; ?>
+							</a>						
+						</div><!-- .post-suggestions -->
 
-					<?php
-					/* translators: %1$s: smiley */
-					$myowntheme_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'myowntheme' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$myowntheme_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+						<?php
+							endwhile;
+						endif;
+						?>
+					</div><!-- .suggestions -->
+				</div><!-- .recent-post -->
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->

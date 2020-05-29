@@ -57,8 +57,8 @@
 }
 
 .odd {
-	border-top: 1px solid #cfdbd5;
-	border-left: 1px solid #cfdbd5;
+	border-top: 1px solid $color__header-link;
+	border-left: 1px solid $color__header-link;
 }
 .even {
 	border-top: 1px solid #f5cb5c;

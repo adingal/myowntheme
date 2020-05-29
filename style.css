@@ -922,6 +922,15 @@ article.page {
       background-image: url("assets/img/folder.png"); }
 .entry-header .entry-meta .tags {
       background-image: url("assets/img/tag.png"); }
+.sticky .entry-header {
+  background-image: url("assets/img/sticky.png");
+  background-repeat: no-repeat;
+  background-size: 48px;
+  background-position: 100% 10%;
+  background-attachment: scroll; }
+@media screen and (min-width: 986px) {
+    .sticky .entry-header {
+      background-position: 100% 20%; } }
 /*
  * Entry content
  */

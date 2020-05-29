@@ -102,6 +102,18 @@ article.page {
 
 }
 
+.sticky .entry-header {
+	background-image: url('assets/img/sticky.png');
+	background-repeat: no-repeat;
+	background-size: 48px;
+	background-position: 100% 10%;
+	background-attachment: scroll;
+
+    @media screen and (min-width: $lg) {
+		background-position: 100% 20%;
+    }	
+}
+
 /*
  * Entry content
  */

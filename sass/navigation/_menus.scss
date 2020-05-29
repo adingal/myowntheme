@@ -231,3 +231,18 @@
 		}
 	}	
 }
+
+.pagination {
+	margin-bottom: 32px;
+
+	.nav-links {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	@media screen and (min-width: $lg) {
+		margin-bottom: 0;
+	}
+}

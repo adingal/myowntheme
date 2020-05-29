@@ -705,6 +705,16 @@ select:focus, select:active {
     background-position: 98% 50%;
     padding-right: 60px;
     text-align: right; } }
+.pagination {
+  margin-bottom: 32px; }
+.pagination .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around; }
+@media screen and (min-width: 986px) {
+    .pagination {
+      margin-bottom: 0; } }
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

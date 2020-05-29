@@ -69,7 +69,7 @@
  * Comment form
  */
 .comment-respond {
-	font-size: .8em;
+	font-size: .9em;
 	margin: 0;
 	border-top: 1px solid $color__header-link;
 	padding-top: 8px;
@@ -88,6 +88,7 @@
 		height: 38px;
 		max-width: 200px;
 		width: 150px;
+		font-size: 1em;
 		padding: 8px 8px 5px 8px;
 	}
 }
@@ -100,6 +101,7 @@
 
 p.comment-notes {
 	display: block;
+	margin-bottom: 0.5em;
 }
 
 p.comment-form-cookies-consent {

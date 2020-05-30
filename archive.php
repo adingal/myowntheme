@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
 	<section class="page-header" data-type="background" data-speed="4">
 		<?php
 		the_archive_title( '<h1 class="page-title">', '</h1>' );

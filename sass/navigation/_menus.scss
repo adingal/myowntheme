@@ -170,7 +170,8 @@
 /* Comment and post navigation */
 .comment-navigation,
 .posts-navigation,
-.post-navigation {
+.post-navigation,
+.pagination {
 
 	.site-main & {
 		margin: 0 0 24px;
@@ -184,7 +185,8 @@
 		justify-content: center;
 		border: 1px solid $color__header-link;
 		border-left: none;
-		border-right: none;	
+		border-right: none;
+		padding: 16px 0;
 	}
 
 	.nav-previous,
@@ -221,15 +223,9 @@
 }
 
 .pagination {
-	margin-bottom: 32px;
-	border-top: 1px solid $color__bg-header;
-	padding-top: 8px;
 
 	.nav-links {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-around;
+		justify-content: space-evenly;
 	}
 
 	@media screen and (min-width: $lg) {

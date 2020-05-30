@@ -192,7 +192,7 @@ function myowntheme_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'myowntheme' ),
+			'name'          => esc_html__( 'Archive', 'myowntheme' ),
 			'id'            => 'sidebar-archive',
 			'description'   => esc_html__( 'Add widgets here.', 'myowntheme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',

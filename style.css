@@ -1013,7 +1013,8 @@ article.page {
   border-radius: 4px;
   padding: 16px; }
 .recent-post > h2 {
-    margin: 0 0 16px 0; }
+    margin: 0 0 16px 0;
+    text-align: center; }
 .suggestions {
   display: flex;
   flex-direction: column;

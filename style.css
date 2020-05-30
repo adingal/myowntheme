@@ -1046,6 +1046,7 @@ article.page {
  * Edit post link
  */
 .edit-post-link {
+  clear: both;
   display: block;
   margin-top: 16px;
   padding: 0;

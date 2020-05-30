@@ -181,22 +181,20 @@ article.page {
 	}	
 }
 
+/*
+ * Main page header
+ */
 .page-header {
+	width: 100%;
 	height: 200px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;		
 	background-image: url('assets/img/night-sky.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-
-	div {
-		width: 100%;
-		height: 200px;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;		
-		background-color: rgba(0, 0, 0, .3);
-	}
 
 	h1 {
 		font-size: 2.4em;
@@ -210,10 +208,6 @@ article.page {
 
 	@media screen and (min-width: $md) {
 		height: 300px;
-
-		div {
-			height: 300px;
-		}
 	}
 }
 

@@ -14,6 +14,15 @@
 
 get_header();
 ?>
+	<section class="page-header" data-type="background" data-speed="4">
+		<h1>
+			<?php
+			if ( ! is_singular() ) :
+				echo esc_html__( 'Blog', 'myowntheme' );
+			endif;
+			?>
+		</h1>
+	</section><!-- .page-header -->
 
 	<main id="primary" class="site-main">
 		<div class="index-wrapper">

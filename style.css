@@ -968,20 +968,20 @@ article.page {
   border-radius: 0 3px 3px 0; }
 .error-404 input[type="submit"]:focus, .error-404 input[type="submit"]:active {
     outline: none; }
+/*
+ * Main page header
+ */
 .page-header {
+  width: 100%;
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-image: url("assets/img/night-sky.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
-.page-header div {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3); }
 .page-header h1 {
     font-size: 2.4em;
     letter-spacing: 1px;
@@ -992,9 +992,7 @@ article.page {
     color: #fff; }
 @media screen and (min-width: 720px) {
     .page-header {
-      height: 300px; }
-      .page-header div {
-        height: 300px; } }
+      height: 300px; } }
 .page-content {
   margin: 24px 0 0 0; }
 .page-content > p {

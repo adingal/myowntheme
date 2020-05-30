@@ -21,7 +21,6 @@ get_header();
 			<div class="index-content">
 				<?php if ( have_posts() ) : ?>
 
-
 					<?php
 					/* Start the Loop */
 					while ( have_posts() ) :

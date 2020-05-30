@@ -152,7 +152,8 @@ article.page {
  * 404 page
  */
 .error-404,
-.no-results {
+.no-results,
+.widget_search {
 	.search-form {
 		display: flex;
 		flex-direction: row;

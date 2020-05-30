@@ -38,6 +38,20 @@
 	}
 }
 
+.widget_archive,
+.widget_categories {
+	select {
+		width: 100%;
+	}
+
+	@media screen and (max-width: $lg) {
+		select {
+			width: 50%;
+			max-width: 294px;
+		}
+	}
+}
+
 /*
  * Calendar
  */
@@ -97,8 +111,8 @@
  * Search
  */
 .widget_search {
-
 	form {
+		justify-content: flex-start !important;
 		width: 100%;
 	}
 
@@ -108,8 +122,14 @@
 		padding: 8px 5px 5px 5px;
 	}
 
-	.search-submit {
-		display: none;
+	input[type="submit"] {
+		max-width: 74px;
+	}
+
+	@media screen and (max-width: $lg) {
+		form {
+			width: 50%;
+		}
 	}
 }
 

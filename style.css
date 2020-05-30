@@ -956,22 +956,27 @@ article.page {
  * 404 page
  */
 .error-404 .search-form,
-.no-results .search-form {
+.no-results .search-form,
+.widget_search .search-form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center; }
 .error-404 input[type="search"],
-.no-results input[type="search"] {
+.no-results input[type="search"],
+.widget_search input[type="search"] {
   min-width: 220px;
   border-radius: 3px 0 0 3px; }
 .error-404 input[type="submit"],
-.no-results input[type="submit"] {
+.no-results input[type="submit"],
+.widget_search input[type="submit"] {
   border-left: none;
   border-radius: 0 3px 3px 0; }
 .error-404 input[type="submit"]:focus, .error-404 input[type="submit"]:active,
   .no-results input[type="submit"]:focus,
-  .no-results input[type="submit"]:active {
+  .no-results input[type="submit"]:active,
+  .widget_search input[type="submit"]:focus,
+  .widget_search input[type="submit"]:active {
     outline: none; }
 /*
  * Main page header
@@ -1219,6 +1224,14 @@ p.comment-form-cookies-consent input[type="checkbox"] {
     .widget_recent_entries li ul li,
     .widget_rss li ul li {
       list-style: circle; }
+.widget_archive select,
+.widget_categories select {
+  width: 100%; }
+@media screen and (max-width: 986px) {
+  .widget_archive select,
+  .widget_categories select {
+    width: 50%;
+    max-width: 294px; } }
 /*
  * Calendar
  */
@@ -1257,13 +1270,17 @@ p.comment-form-cookies-consent input[type="checkbox"] {
  * Search
  */
 .widget_search form {
+  justify-content: flex-start !important;
   width: 100%; }
 .widget_search input {
   width: 100%;
   border: 1px solid #cfdbd5;
   padding: 8px 5px 5px 5px; }
-.widget_search .search-submit {
-  display: none; }
+.widget_search input[type="submit"] {
+  max-width: 74px; }
+@media screen and (max-width: 986px) {
+  .widget_search form {
+    width: 50%; } }
 /*
  * Nav menu
  */

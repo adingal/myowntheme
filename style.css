@@ -955,18 +955,23 @@ article.page {
 /*
  * 404 page
  */
-.error-404 .search-form {
+.error-404 .search-form,
+.no-results .search-form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center; }
-.error-404 input[type="search"] {
+.error-404 input[type="search"],
+.no-results input[type="search"] {
   min-width: 220px;
   border-radius: 3px 0 0 3px; }
-.error-404 input[type="submit"] {
+.error-404 input[type="submit"],
+.no-results input[type="submit"] {
   border-left: none;
   border-radius: 0 3px 3px 0; }
-.error-404 input[type="submit"]:focus, .error-404 input[type="submit"]:active {
+.error-404 input[type="submit"]:focus, .error-404 input[type="submit"]:active,
+  .no-results input[type="submit"]:focus,
+  .no-results input[type="submit"]:active {
     outline: none; }
 /*
  * Main page header

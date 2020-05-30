@@ -43,6 +43,8 @@
 			get_search_form();
 
 		endif;
+
+		get_template_part( 'template-parts/content', 'recent_posts' );
 		?>
 		
 	</div><!-- .page-content -->

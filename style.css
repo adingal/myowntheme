@@ -654,7 +654,10 @@ select:focus, select:active {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border: 1px solid #cfdbd5;
+  border-left: none;
+  border-right: none; }
 .comment-navigation .nav-previous,
 .comment-navigation .nav-next,
 .posts-navigation .nav-previous,
@@ -667,7 +670,6 @@ select:focus, select:active {
   background-size: 40px;
   background-attachment: scroll;
   font-size: .9em;
-  margin-bottom: 8px;
   padding: 16px; }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -966,7 +968,7 @@ article.page {
     outline: none; }
 .page-header {
   height: 200px;
-  background-image: url("assets/img/office-space.jpg");
+  background-image: url("assets/img/night-sky.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 .page-header div {
@@ -984,7 +986,7 @@ article.page {
     text-align: center;
     margin: 0;
     padding: 32px 0;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
     color: #fff; }
 @media screen and (min-width: 720px) {
     .page-header {

@@ -181,7 +181,10 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: center;	
+		justify-content: center;
+		border: 1px solid $color__header-link;
+		border-left: none;
+		border-right: none;	
 	}
 
 	.nav-previous,
@@ -191,8 +194,7 @@
 		background-repeat: no-repeat;
 		background-size: 40px;
 		background-attachment: scroll;
-		font-size: .9em;	
-		margin-bottom: 8px;
+		font-size: .9em;
 		padding: 16px;
 	}
 

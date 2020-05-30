@@ -182,10 +182,30 @@ article.page {
 }
 
 .page-header {
-	text-align: center;
-	
+	height: 300px;
+	background-image: url('assets/img/office-space.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	div {
+		width: 100%;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;		
+		background-color: rgba(0, 0, 0, .3);
+	}
+
 	h1 {
-		margin: 32px 0 16px 0;
+		font-size: 2.4em;
+		letter-spacing: 1px;
+		text-align: center;
+		margin: 0;
+		padding: 32px 0;
+		text-shadow: 3px 3px 0 rgba(0, 0, 0, .5);;
+		color: $color__background-body;
 	}
 }
 

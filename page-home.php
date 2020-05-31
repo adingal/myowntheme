@@ -41,6 +41,7 @@ get_header();
                     <?php
                             endwhile;
                         endif;
+                        wp_reset_postdata();
                     ?>
                 </div>
                 <div class="tools">

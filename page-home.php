@@ -77,6 +77,11 @@ get_header();
                 </div><!-- .technologies -->
             </div><!-- .backdrop -->
         </section><!-- .welcome -->
+
+        <div class="project-intro">
+            <h2>Project</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est natus vitae corrupti totam dicta nisi repellat qui quis repudiandae.</p>
+        </div><!-- .project-intro -->
 	</main><!-- #main -->
 
 <?php

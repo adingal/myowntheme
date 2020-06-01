@@ -6,8 +6,9 @@
     justify-content: center;
     background-image: url('assets/img/bg-purse.jpg');
     background-position: 50% 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
+    background-attachment: fixed;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@
 
     .backdrop {
         width: 100%;
-        background-color: rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .3);
     }
 
     h2 {
@@ -107,5 +108,25 @@
             display: flex;
             padding-bottom: 64px;
         }
+    }
+}
+
+/*
+ * Project Section
+ */
+.project-intro {
+    background-color: #132226;
+    text-align: center;
+    padding: 32px 18px;
+    color: $color__header-link;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
     }
 }

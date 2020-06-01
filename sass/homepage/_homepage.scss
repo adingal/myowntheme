@@ -1,0 +1,111 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/img/bg-purse.jpg');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+
+    .backdrop {
+        width: 100%;
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-style: italic;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+        margin: 0;
+    }
+
+    .welcome-text,
+    .technologies,
+    .languages,
+    .tools {
+        width: 100%;
+    }
+
+    .welcome-text {
+        padding-top: 90px;
+
+        h1 {
+            text-shadow: 3px 3px 2px rgba(0, 0, 0, .5);
+            margin: 0;
+        }        
+
+        p {
+            margin-bottom: 24px;
+        }
+    }
+
+    .technologies {
+        padding: 0;
+    }
+
+    .languages,
+    .tools {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        img {
+            max-width: 48px;
+            margin: 0 8px;
+        }
+    }
+
+    .languages {
+        padding-bottom: 64px;
+
+        img {
+            &[src*="js.png"] {
+                max-width: 43px;
+            }
+
+            &[src*="bootstrap.png"] {
+                max-width: 49px;
+                margin-top: 3px;
+            }
+
+            &[src*="php.png"],
+            &[src*="mysql.png"] {
+                max-width: 60px;
+                margin-top: 3px;
+            }
+        }
+    }
+
+    .tools {
+        display: none;
+    }
+
+    @media screen and (min-width: $md) {
+        .technologies {
+            padding-top: 16px;
+        }
+
+        .languages {
+            padding: 0;
+        }
+
+        .tools {
+            display: flex;
+            padding-bottom: 64px;
+        }
+    }
+}

@@ -3,8 +3,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 a.continue-reading {
-	border: 1px solid;
-	border-color: $color__header-link;
+	border: 1px solid $color__header-link;
 	border-radius: 3px;
 	background: $color__background-button;
 	color: rgba(0, 0, 0, 0.8);
@@ -16,6 +15,7 @@ a.continue-reading {
 	&:active,
 	&:focus {
 		background-color: $color__input-hover;
+		border: 1px solid $color__input-hover;
 		color: #ffffff;
 	}
 }

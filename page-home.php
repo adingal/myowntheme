@@ -23,7 +23,7 @@ get_header();
                         <?php
                             $args = array(
                                 'post_type' => 'technologies',
-                                'posts_per_page' => 6,
+                                'posts_per_page' => 10,
                                 'order' => 'ASC',
                                 'orderby' => 'ID',
                             );

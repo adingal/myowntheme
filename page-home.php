@@ -5,7 +5,10 @@
 
 // Get fields
 $welcome_title = get_field( 'welcome_title' );
-$welcome_description = get_field( 'welcome_description' );
+$welcome_body = get_field( 'welcome_body' );
+
+$project_intro_title = get_field( 'project_introduction_title' );
+$project_intro_body = get_field( 'project_introduction_body' );
 
 get_header();
 ?>
@@ -15,7 +18,7 @@ get_header();
             <div class="backdrop">
                 <div class="welcome-text">
                     <h1><?php echo esc_html__( $welcome_title, 'myowntheme' ); ?></h1>
-                    <p><?php echo esc_html__( $welcome_description, 'myowntheme' ); ?></p>
+                    <p><?php echo esc_html__( $welcome_body, 'myowntheme' ); ?></p>
                 </div>
                 <div class="technologies">
                     <p>Tools &amp; technologies:</p>
@@ -79,8 +82,24 @@ get_header();
         </section><!-- .welcome -->
 
         <div class="project-intro">
-            <h2>Project</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est natus vitae corrupti totam dicta nisi repellat qui quis repudiandae.</p>
+            <h2>
+                <?php
+                    if ( !empty( $project_intro_title ) ) :
+                        echo esc_html__( $project_intro_title, 'myowntheme' );
+                    else :
+                        echo esc_html__( 'Project Title', 'myowntheme' );
+                    endif;
+                ?>
+            </h2>
+            <p>
+                <?php
+                    if ( !empty( $project_intro_body ) ) :
+                    echo esc_html__( $project_intro_body, 'myowntheme' );
+                    else :
+                        echo esc_html__( 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, perspiciatis eligendi architecto ullam dicta.', 'myowntheme' );
+                    endif;
+                ?>
+            </p>
         </div><!-- .project-intro -->
 	</main><!-- #main -->
 

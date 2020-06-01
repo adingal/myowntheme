@@ -1414,11 +1414,6 @@ object {
 # Homepage
 --------------------------------------------------------------*/
 .welcome {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   background-image: url("assets/img/bg-purse.jpg");
   background-position: 50% 0;
   background-repeat: repeat;
@@ -1430,6 +1425,12 @@ object {
   color: #ffffff; }
 .welcome .backdrop {
     width: 100%;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.3); }
 .welcome h2 {
     font-size: 1.6em; }
@@ -1442,13 +1443,12 @@ object {
   .welcome .languages,
   .welcome .tools {
     width: 100%; }
-.welcome .welcome-text {
-    padding-top: 90px; }
 .welcome .welcome-text h1 {
-      text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-      margin: 0; }
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    margin: 0; }
 .welcome .welcome-text p {
-      margin-bottom: 24px; }
+    margin-bottom: 24px; }
 .welcome .technologies {
     padding: 0; }
 .welcome .languages,
@@ -1465,26 +1465,21 @@ object {
     .welcome .tools img {
       max-width: 48px;
       margin: 0 8px; }
-.welcome .languages {
-    padding-bottom: 64px; }
 .welcome .languages img[src*="js.png"] {
-      max-width: 43px; }
+    max-width: 43px; }
 .welcome .languages img[src*="bootstrap.png"] {
-      max-width: 49px;
-      margin-top: 3px; }
+    max-width: 49px;
+    margin-top: 3px; }
 .welcome .languages img[src*="php.png"], .welcome .languages img[src*="mysql.png"] {
-      max-width: 60px;
-      margin-top: 3px; }
+    max-width: 60px;
+    margin-top: 3px; }
 .welcome .tools {
     display: none; }
 @media screen and (min-width: 720px) {
-    .welcome .technologies {
-      padding-top: 16px; }
     .welcome .languages {
       padding: 0; }
     .welcome .tools {
-      display: flex;
-      padding-bottom: 64px; } }
+      display: flex; } }
 /*
  * Project Section
  */
@@ -1494,6 +1489,7 @@ object {
   padding: 32px 18px;
   color: #cfdbd5; }
 .project-intro h2 {
+    letter-spacing: 1px;
     margin: 0;
     padding: 0; }
 .project-intro p {

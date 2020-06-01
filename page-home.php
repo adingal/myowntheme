@@ -14,7 +14,7 @@ get_header();
 ?>
 
 	<main id="primary">
-        <section class="welcome" data-type="background" data-speed="4">
+        <section class="welcome" data-type="background" data-speed="2">
             <div class="backdrop">
                 <div class="welcome-text">
                     <h1><?php echo esc_html__( $welcome_title, 'myowntheme' ); ?></h1>

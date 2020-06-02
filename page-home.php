@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Homepage
+ * Template Name: Home Page
  */
 
 // Get fields

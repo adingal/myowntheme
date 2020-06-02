@@ -42,7 +42,7 @@
             <a href="<?php the_permalink(); ?>" class="continue-reading">
                 <?php echo $continue_reading; ?>
             </a>						
-        </div><!-- .post-suggestions -->
+        </div><!-- .suggestion-item -->
 
         <?php
             endwhile;

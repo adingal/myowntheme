@@ -1,19 +1,50 @@
-.contact-wrapper {
-    max-width: $xl;
+.site-contact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;    
-    margin: 0 auto;
-}
-
-.design {
-    width: 100%;
-    height: 400px;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
     background-image: url('assets/img/bg-butterfly.jpg');
     background-attachment: fixed;
     background-position: center center;
+    overflow: hidden;   
+}
+
+.backdrop {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 100;
+}
+
+.contact-wrapper {
+    max-width: $xl;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 32px 0;
+    z-index: 200;
+
+    .contact-body {
+        max-width: 500px;
+        text-align: center;
+        margin-right: 16px;
+        padding: 12px;
+        color: $color__background-body;
+    }
+
+    @media screen and (min-width: $lg) {
+        flex-direction: row;
+        padding-top: 120px;
+
+        .contact-wrapper {
+            text-align: left;
+        }
+    }
 }
 
 .page {
@@ -23,14 +54,16 @@
         flex-wrap: wrap;
         align-items: flex-end;
         justify-content: center;
-        margin: 32px 0;
+        padding: 8px;
 
         form {
             max-width: 400px;
             background-color: #333533;
-            padding: 32px 16px 16px 16px;
-            color: $color__header-link;
+            // border: 1px solid $color__header-link;
             border-radius: 4px;
+            padding: 32px 16px 16px 16px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+            color: $color__header-link;
 
             p {
                 display: flex;

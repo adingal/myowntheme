@@ -94,13 +94,19 @@ get_header();
             <p>
                 <?php
                     if ( !empty( $project_intro_body ) ) :
-                    echo esc_html__( $project_intro_body, 'myowntheme' );
+                        echo esc_html__( $project_intro_body, 'myowntheme' );
                     else :
                         echo esc_html__( 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, perspiciatis eligendi architecto ullam dicta.', 'myowntheme' );
                     endif;
                 ?>
             </p>
         </div><!-- .project-intro -->
+        <section class="projects">
+            <div class="project-item"></div>
+            <div class="project-item"></div>
+            <div class="project-item"></div>
+            <div class="project-item"></div>
+        </section>
 	</main><!-- #main -->
 
 <?php

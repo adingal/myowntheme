@@ -29,22 +29,25 @@
 			);
 
 		elseif ( is_search() ) :
-			?>
+		?>
+
+		<div class="page-content-body">
 
 			<p><?php esc_html_e( 'Nothing matched your search terms. Please try again with some different keywords.', 'myowntheme' ); ?></p>
-			<?php
-			get_search_form();
+			<?php get_search_form(); ?>
 
-		else :
-			?>
+		</div>
+
+		<?php else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'myowntheme' ); ?></p>
-			<?php
+
+		<?php
 			get_search_form();
 
 		endif;
 
-		get_template_part( 'template-parts/content', 'recent_posts' );
+			get_template_part( 'template-parts/content', 'recent_posts' );
 		?>
 		
 	</div><!-- .page-content -->

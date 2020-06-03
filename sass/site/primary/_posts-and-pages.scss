@@ -174,7 +174,7 @@ article.page {
 	}
 
 	input[type="search"] {
-		min-width: 220px;
+		min-width: 180px;
 		border-radius: 3px 0 0 3px;
 	}
 
@@ -235,9 +235,9 @@ article.page {
 
 .recent-post {
 	margin: 32px 0;
-	border: 1px solid $color__header-link;
+	// border: 1px solid $color__header-link;
 	border-radius: 4px;
-	padding: 16px;
+	padding: 0;
 
 	> h2 {
 		margin: 0 0 16px 0;
@@ -250,12 +250,18 @@ article.page {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: space-around;
 
 	.suggestion-item {
 		width: 100%;
 		position: relative;
-		padding-bottom: 40px;
+		margin-bottom: 16px;
+		border: none;
+		padding-bottom: 45px;
+
+		h3 {
+			padding: 0;
+		}
 	}
 
 	.entry-title {
@@ -274,6 +280,14 @@ article.page {
 		.suggestion-item {
 			width: 30%;
 			min-height: 290px;
+			border: 1px solid $color__header-link;
+			border-bottom: none;
+			border-radius: 20px 20px 0 0;
+			padding: 12px 12px 45px 12px;
+			
+			.continue-reading {
+				right: 12px;
+			}
 		}		
 	}
 }

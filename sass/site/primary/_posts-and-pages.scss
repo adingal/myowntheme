@@ -40,6 +40,7 @@
 }
 
 .post,
+.single,
 article.page {
 	margin-bottom: 24px;
 
@@ -343,4 +344,18 @@ article.page {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/*
+ * Projects
+ */
+.single-projects {
+	
+	.projects {
+		display: block;
+	}
+
+	.entry-title {
+		margin: 8px 0;
+	}
 }

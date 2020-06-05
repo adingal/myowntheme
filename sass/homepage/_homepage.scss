@@ -144,6 +144,15 @@
 
     .project-highlights {
         background-color: #cfdbd5;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            margin: 0;
+        }
     }
 
     .project-content {

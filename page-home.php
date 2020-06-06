@@ -119,7 +119,7 @@ get_header();
         <section class="projects">
             <div class="project-content">
                 <h3><?php the_title(); ?></h3>
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
                 <a href="<?php the_permalink(); ?>" class="continue-reading">Check it out</a>
             </div>
             <div class="project-highlights">

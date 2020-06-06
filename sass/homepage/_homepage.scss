@@ -186,6 +186,10 @@
         }
     }
 
+    li {
+        font-size: .9em;
+    }
+
     @media screen and (min-width: $lg) {
         flex-direction: row;
 

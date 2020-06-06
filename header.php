@@ -18,7 +18,7 @@
 	<meta name="description" content="Portfolio theme for my own use">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+	<link rel="shortcut icon" type="image/jpg" href="/favicon.ico">
 	<script src="<?php echo get_template_directory_uri() . '/assets/js/jquery-3.5.1.min.js'; ?>"></script>
 	<?php wp_head(); ?>
 </head>

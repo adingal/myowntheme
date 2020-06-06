@@ -17,39 +17,60 @@ get_header();
     <section class="welcome" data-type="background" data-speed="2">
         <div class="backdrop">
             <div class="welcome-text">
-                <h1><?php echo esc_html__( $welcome_title, 'myowntheme' ); ?></h1>
-                <p><?php echo esc_html__( $welcome_body, 'myowntheme' ); ?></p>
+                <h1>
+                    <?php
+                        if ( $welcome_title ) :
+                            echo esc_html__( $welcome_title, 'myowntheme' );
+                        else :
+                            echo esc_html__( 'Welcome Title', 'myowntheme' );
+                        endif;
+                    ?>
+                </h1>
+                <p>
+                    <?php
+                        if ( $welcome_body ) :
+                            echo esc_html__( $welcome_body, 'myowntheme' );
+                        else :
+                            echo esc_html__( 'Welcome body...', 'myowntheme' );
+                        endif;
+                    ?>
+                </p>
             </div>
-            <div class="technologies">
-                <p>Tools &amp; technologies:</p>
-                <div class="languages">
-                    <?php
-                        $args = array(
-                            'post_type' => 'technologies',
-                            'posts_per_page' => 10,
-                            'order' => 'ASC',
-                            'orderby' => 'ID',
-                        );
-                        $technologies = new WP_Query ( $args );
+                
+            <?php
+                $args = array(
+                    'post_type' => 'technologies',
+                    'posts_per_page' => 10,
+                    'order' => 'ASC',
+                    'orderby' => 'ID',
+                );
+                $technologies = new WP_Query ( $args );
 
-                        if ( $technologies->have_posts() ) :
-                            while ( $technologies->have_posts() ) :
-                                $technologies->the_post();
-                    ?>
+                if ( !empty( $technologies ) ) :
+            ?>
+                <div class="technologies">
+                    <p>Tools &amp; technologies:</p>
+                        <div class="languages">
+                            <?php
+                                if ( $technologies->have_posts() ) :
+                                    while ( $technologies->have_posts() ) :
+                                        $technologies->the_post();
+                            ?>
 
-                    <?php
-                        if ( has_post_thumbnail() ) :
-                            the_post_thumbnail();
-                        endif;
-                    ?>
+                            <?php
+                                if ( has_post_thumbnail() ) :
+                                    the_post_thumbnail();
+                                endif;
+                            ?>
 
-                    <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
-                    ?>
-                </div><!-- .languages -->
-                <div class="tools">
+                            <?php
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
+                            ?>
+                        </div><!-- .languages -->
+
+                
                     
                     <?php
                         $args = array(
@@ -60,24 +81,38 @@ get_header();
                         );
                         $web_tools = new WP_Query ( $args );
 
-                        if ( $web_tools->have_posts() ) :
-                            while ( $web_tools->have_posts() ) :
-                                $web_tools->the_post();
+                        if ( !empty( $web_tools ) ) :
                     ?>
 
+                        <div class="tools">
+
+                            <?php
+                                if ( $web_tools->have_posts() ) :
+                                    while ( $web_tools->have_posts() ) :
+                                        $web_tools->the_post();
+                            ?>
+
+                            <?php
+                                if ( has_post_thumbnail() ) :
+                                    the_post_thumbnail();
+                                endif;
+                            ?>
+
+                            <?php
+                                    endwhile;
+                                endif;
+                                wp_reset_postdata();
+                            ?>
+
+                        </div><!-- .tools -->
                     <?php
-                        if ( has_post_thumbnail() ) :
-                            the_post_thumbnail();
-                        endif;
+                        endif; // End of if web_tools
                     ?>
 
-                    <?php
-                            endwhile;
-                        endif;
-                        wp_reset_postdata();
-                    ?>
-                </div><!-- .tools -->
-            </div><!-- .technologies -->
+                </div><!-- .technologies -->
+            <?php
+                endif; // End of if technologies
+            ?>
         </div><!-- .backdrop -->
     </section><!-- .welcome -->
 

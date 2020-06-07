@@ -10,6 +10,12 @@ $welcome_body = get_field( 'welcome_body' );
 $project_intro_title = get_field( 'project_introduction_title' );
 $project_intro_body = get_field( 'project_introduction_body' );
 
+$project_video = get_field( 'project_video' );
+$attr = array(
+    'mp4' => $project_video,
+    'preload' => 'auto'
+);
+
 get_header();
 ?>
 
@@ -159,9 +165,7 @@ get_header();
             </div>
             <div class="project-highlights">
                 <?php
-                    if ( has_post_thumbnail() ) :
-                        the_post_thumbnail();
-                    endif;
+                    echo wp_video_shortcode( $attr );
                 ?>
             </div>
         </section><!-- .projects -->  

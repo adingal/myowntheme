@@ -186,8 +186,18 @@
         }
     }
 
+    ul {
+        margin-bottom: 16px;
+    }
+
     li {
         font-size: .9em;
+    }
+
+    @media screen and (min-width: $sm) {
+        .project-highlights {
+            padding: 16px;
+        }
     }
 
     @media screen and (min-width: $lg) {

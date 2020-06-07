@@ -17,13 +17,18 @@
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'myowntheme' ) ); ?>">
 					<?php
 					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'myowntheme' ), 'WordPress' );
+					printf( esc_html__( 'Powered by %s', 'myowntheme' ), 'WordPress' );
 					?>
 				</a>
+				<span class="sep"> | </span>
+				<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( '%1$s by %2$s.', 'myowntheme' ), 'myowntheme', '<a href="https://www.adingal.com" target="_blank">Alex Dingal</a>' );
+				?>				
 			</p>
 			<p>
 				&copy; <?php echo Date( 'Y' ); ?>
-				<a href="http://adingal.000webhostapp.com"><?php echo bloginfo( 'name' ); ?></a>
+				<a href="https://www.adingal.com" target="_blank"><?php echo bloginfo( 'name' ); ?></a>
 			</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

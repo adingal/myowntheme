@@ -13,16 +13,12 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<?php
-				wp_nav_menu(
-					array(
-						'menu_class' => 'footer-social-menu',
-						'theme_location' => 'social-1',
-						'container' => 'nav',
-						'container_class' => 'social-menu',
-					)
-				);
-			?>
+			<nav>
+				<ul class="footer-social-menu">
+					<li><a href="https://www.linkedin.com/in/alex-dingal-421970178/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin.png"></a></li>
+					<li><a href="https://github.com/adingal" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/github.png"></a></li>
+				</ul>
+			</nav>
 			<p>
 				&copy; <?php echo Date( 'Y' ); ?>
 				<a href="https://www.adingal.com" target="_blank"><?php echo bloginfo( 'name' ); ?></a>

@@ -1,21 +1,26 @@
-html {
+html,
+body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    height: 100%;
     background-image: url('assets/img/paper.png');
     background-repeat: repeat;
     background-position: top left;
     background-attachment: scroll;
 }
 
-.site {
-    height: 100%;
-}
+#page,
+.site-contact {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 84px;
 
-.site-main {
-    height: auto;
+    @media screen and (min-width: $lg) {
+        padding-bottom: 88px;
+    }
 }
 
 .site-main,
@@ -24,4 +29,16 @@ body {
     max-width: $xl;
     margin: 0 auto;
     padding: 24px 16px 16px 16px; 
+}
+
+.site-footer {
+    clear: both;
+    width: 100%;
+    height: 84px;
+    position: absolute;
+    bottom: 0;
+
+    @media screen and (min-width: $lg) {
+        height: 88px;
+    }    
 }

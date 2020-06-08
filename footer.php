@@ -13,19 +13,16 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<p>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'myowntheme' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Powered by %s', 'myowntheme' ), 'WordPress' );
-					?>
-				</a>
-				<span class="sep"> | </span>
-				<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( '%1$s by %2$s.', 'myowntheme' ), 'myowntheme', '<a href="https://www.adingal.com" target="_blank">Alex Dingal</a>' );
-				?>				
-			</p>
+			<?php
+				wp_nav_menu(
+					array(
+						'menu_class' => 'footer-social-menu',
+						'theme_location' => 'social-1',
+						'container' => 'nav',
+						'container_class' => 'social-menu',
+					)
+				);
+			?>
 			<p>
 				&copy; <?php echo Date( 'Y' ); ?>
 				<a href="https://www.adingal.com" target="_blank"><?php echo bloginfo( 'name' ); ?></a>

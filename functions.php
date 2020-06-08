@@ -51,6 +51,7 @@ if ( ! function_exists( 'myowntheme_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'myowntheme' ),
+				'social-1' => esc_html__( 'Social', 'myowntheme' ),
 			)
 		);
 

@@ -1,6 +1,7 @@
 .site-footer {
     background-color: $color__main;
     padding: 1em;
+    z-index: 1000;
     color: #ffffff;
 
     @media screen and (min-width: $md) {

@@ -41,6 +41,10 @@
 article.page {
 	margin-bottom: 24px;
 
+	&.single-projects {
+		margin-bottom: 0;
+	}
+
 	.attachment-post-thumbnail {
 		margin-bottom: 16px;
 	}
